@@ -140,3 +140,4 @@ D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\refint\Workloopz.dll
 D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\Workloopz.pdb
 D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\Workloopz.genruntimeconfig.cache
 D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\ref\Workloopz.dll
+D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\Workloopz.sourcelink.json

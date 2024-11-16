@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Doan\\Workloopz\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,8 +27,8 @@
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,24 +42,84 @@
       "DocumentGroups": [
         {
           "DockedHeight": 375,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Workloopz\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Workloopz\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:53:21.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T15:51:52.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Home\\Login.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T15:51:26.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T15:47:20.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "Workloopz\\Views\\User\\Register.cshtml",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\User\\Register.cshtml",
               "RelativeToolTip": "Workloopz\\Views\\User\\Register.cshtml",
-              "ViewState": "AQIAAJ8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-16T15:02:40.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "LoginVM.cs",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\LoginVM.cs",
               "RelativeDocumentMoniker": "Workloopz\\ViewModels\\LoginVM.cs",
@@ -51,30 +127,31 @@
               "RelativeToolTip": "Workloopz\\ViewModels\\LoginVM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:21:50.611Z"
+              "WhenOpened": "2024-11-15T15:21:50.611Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Workloopz\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Workloopz\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcBAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-15T15:18:35.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Workloopz\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Workloopz\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-15T16:58:59.515Z",
               "EditorCaption": ""
