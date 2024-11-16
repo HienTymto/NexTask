@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Doan\\Workloopz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 375,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\User\\Register.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\User\\Register.cshtml",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T15:02:40.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginVM.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\LoginVM.cs",
+              "RelativeDocumentMoniker": "Workloopz\\ViewModels\\LoginVM.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\LoginVM.cs",
+              "RelativeToolTip": "Workloopz\\ViewModels\\LoginVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:21:50.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-15T15:18:35.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-15T16:58:59.515Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
