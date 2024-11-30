@@ -1,0 +1,37 @@
+﻿@{
+	Layout = "TaskLayout/_TaskLayout";
+	ViewData["Title"] = "Sơ đồ Gantt";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ViewData["Title"]</title>
+	<!-- DHTMLX Gantt CSS -->
+	<link rel="stylesheet" href="~/lib/codebase/dhtmlxgantt.css">
+	<!-- DHTMLX Gantt JS -->
+	<script src="~/lib/codebase/dhtmlxgantt.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // specifying the date format
+            gantt.config.date_format = "%Y-%m-%d %H:%i";
+            // initializing gantt
+            gantt.init("gantt_here");
+
+            // initiating data loading
+            gantt.load("/api/data");
+            // initializing dataProcessor
+            var dp = new gantt.dataProcessor("/api/");
+            // and attaching it to gantt
+            dp.init(gantt);
+            // setting the REST mode for dataProcessor
+            dp.setTransactionMode("REST");
+        });
+    </script>
+</head>
+<body>
+    <div id="gantt_here" style="width: 100%; height: 100vh;"></div>
+</body>
+
+</html>

@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 using Workloopz.Data;
 using Workloopz.Models;
 using Workloopz.ViewModels;
@@ -15,8 +19,8 @@ namespace Workloopz.Controllers
         {
             db = context;
         }
-        [HttpGet("Dashboard")]
-        public IActionResult Index()
+		[Authorize]
+		public IActionResult Index()
         {
             return View();
         }
@@ -26,7 +30,7 @@ namespace Workloopz.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(LoginVM model)
+        public async Task<IActionResult> Login(LoginVM model)
         {
             if (ModelState.IsValid) {
                 var user = db.Users.SingleOrDefault(usr => usr.Username == model.Username);
@@ -37,8 +41,16 @@ namespace Workloopz.Controllers
                     //Kiem tra mat khau neu ton tai User
                     if (user.Password == model.Password)
                     {
-                        //Neu dung mat khau chuyen ve dashboard
-                        return Redirect("/Dashboard");
+                        var claims = new List<Claim> {
+                            new Claim (ClaimTypes.Name, user.FirstName + " " + user.LastName),
+                            new Claim("UserID", user.Id.ToString()),
+                        };
+                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+						await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
+                        
+						//Neu dung mat khau chuyen ve dashboard
+						return View("Index");
                     }
                     else {
                         //Neu sai mat khau  

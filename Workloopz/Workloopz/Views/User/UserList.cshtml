@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "_Layout";
+}
+@{
+	// lấy user
+	var Users = Model ;
+}
+<head>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<div class="col-12 col-lg-8 col-xxl-9 d-flex">
+	<div class="card flex-fill">
+		<div class="card-header row my-0">
+			<div class="col-7">
+				<h5 class="card-title mb-0 ">Danh sách nhân viên</h5>
+			</div>
+			<div class="col-4">
+				<a class="btn btn-primary" href="@Url.Action("Register", "User")" role="button">Thêm nhân viên</a>
+			</div>
+		</div>
+		<table class="table table-hover my-0">
+			<thead>
+				<tr>
+					<th>Mã nhân viên</th>
+					<th class="d-none d-xl-table-cell">Họ và tên</th>
+					<th class="d-none d-xl-table-cell">Chức vụ</th>
+					<th class="d-none d-xl-table-cell">Bộ phận</th>
+					<th>Status</th>
+					
+				</tr>
+			</thead>
+			<tbody> @foreach (var user in Users)
+			{
+					<tr>
+						<td>@user.Id</td>
+						<td class="d-none d-xl-table-cell"> @user.LastName @user.FirstName</td>
+						<td class="d-none d-xl-table-cell">@user.JobTitle</td>
+						<td class="d-none d-xl-table-cell">@user.Bu</td>
+						@if (@user.Status==true)
+					{
+								<td><span class="badge bg-success">Hoạt động</span></td>
+					}
+					else{
+								<td><span class="badge bg-danger">Khoá</span></td>
+					}
+						
+						
+					</tr>
+			}
+				
+				
+			</tbody>
+		</table>
+	</div>
+</div>

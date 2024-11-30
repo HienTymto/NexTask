@@ -1,0 +1,94 @@
+﻿@{
+	Layout = "TaskLayout/_TaskLayout";
+	var donetasks = ViewBag.Donetasks;
+	var CreatedTask = ViewBag.CreatedTask;
+	var UpdateTask = ViewBag.UpdateTasks;
+}
+<head>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<div class="row">
+	@*Done*@<div class="col-3 px-2">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-3 mt-0">
+						<i class="align-middle me-2 " data-feather="check"></i>
+					</div>
+					<div class="col-9 ">
+						<div class="mb-0 mt-1 ">
+							<span class="text-success  h5"> <i class="mdi mdi-arrow-bottom-right"></i> @donetasks </span>
+							<span class="text-success h5">Hoàn thành</span>
+						</div>
+						<div class="mb-0 mt-1">
+							<span class="text-secondary">Trong 7 ngày qua</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	@*Update*@<div class="col-3 px-2">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-3 mt-0">
+						<i class="align-middle me-2 " data-feather="edit-3"></i>
+					</div>
+					<div class="col-9 ">
+						<div class="mb-0 mt-1 ">
+							<span class="text-primary  h5"> <i class="mdi mdi-arrow-bottom-right"></i> @UpdateTask </span>
+							<span class="text-primary h5">Cập nhật</span>
+						</div>
+						<div class="mb-0 mt-1">
+							<span class="text-secondary">Trong 7 ngày qua</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	@*Create*@<div class="col-3 px-2">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-3 mt-0">
+						<i class="align-middle me-2 " data-feather="plus"></i>
+					</div>
+					<div class="col-9 ">
+						<div class="mb-0 mt-1 ">
+							<span class="text-info  h5"> <i class="mdi mdi-arrow-bottom-right"></i> @CreatedTask </span>
+							<span class="text-info h5">Công việc mới</span>
+						</div>
+						<div class="mb-0 mt-1">
+							<span class="text-secondary">Trong 7 ngày qua</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	@*Due*@<div class="col-3 px-2">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-3 mt-0">
+						<i class="align-middle me-2 " data-feather="calendar"></i>
+					</div>
+					<div class="col-9 ">
+						<div class="mb-0 mt-1 ">
+							<span class="text-danger  h5"> <i class="mdi mdi-arrow-bottom-right"></i> 2 </span>
+							<span class="text-danger h5">Quá hạn</span>
+						</div>
+						<div class="mb-0 mt-1">
+							<span class="text-secondary">Trong 7 ngày qua</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>

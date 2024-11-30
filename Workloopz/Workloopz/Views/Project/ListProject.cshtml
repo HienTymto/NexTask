@@ -1,0 +1,82 @@
+﻿@{
+	Layout = "_Layout";
+	var Project = ViewBag.Projects;
+	var userIdString = User.FindFirst("UserID")?.Value; // Lấy giá trị từ Claim
+	int userId = userIdString != null ? int.Parse(userIdString) : 0; // Chuyển đổi sang int, gán 0 nếu null
+
+	var CurUser = ViewBag.curUser;
+}
+@model Workloopz.ViewModels.ProjectVM
+
+<head>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<div class="col-12 col-lg-8 col-xxl-9 d-flex">
+	<div class="card flex-fill">
+		<div class="card-header row ">
+			<div class="col-7">
+				<h5 class="card-title mb-0 ">Danh sách Dự án</h5>
+			</div>
+			<!-- Full screen modal -->
+			
+			<div class="col-4">
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Thêm dự án</button>
+			</div>
+		</div>
+		<table class="table table-hover my-0">
+			<thead>
+				<tr>
+					<th>Mã dự án</th>
+					<th class="d-none d-xl-table-cell">Tên dự án</th>
+					<th class="d-none d-xl-table-cell">Trưởng nhóm</th>
+					<th class="d-none d-xl-table-cell">Thao tác</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var project in Project)
+				{
+					<tr onclick="location.href='@Url.Action("List", "Task", new { id = project.Id })'" style="cursor: pointer;">
+						
+						<td>@project.Id</td>
+						<td class="d-none d-xl-table-cell">@project.Name</td>
+						<td class="d-none d-xl-table-cell">@CurUser.FirstName  @CurUser.LastName</td>
+						<td class="d-none d-xl-table-cell">Xóa</td>
+					</tr>
+				}
+			</tbody>
+
+		</table>
+	</div>
+	
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thêm dự án</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form asp-action="CreateProject">
+						<div class="mb-3">
+							<input type="hidden" asp-for="@Model.Owner" value="@userId"/>
+							
+							<label asp-for="@Model.Name" class="col-form-label"></label>
+							<input type="text" class="form-control" asp-for="@Model.Name">
+						</div>
+						<div class="mb-3">
+							<label asp-for="@Model.Description" class="col-form-label"></label>
+							<textarea class="form-control" asp-for="@Model.Description"></textarea>
+						</div>
+
+						<div class="d-flex justify-content-between">
+							
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+							<button type="submit" class="btn btn-primary">Thêm</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,11 +1,13 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Workloopz.ViewModels
 {
     public class RegisterVM
     {
-        public int Id { get; set; }
+		
+		
         [Display(Name ="Họ")]
         [Required(ErrorMessage ="*")]
         [MaxLength(50, ErrorMessage ="Tối đa 50 kí tự.")]
@@ -14,8 +16,8 @@ namespace Workloopz.ViewModels
         [Required(ErrorMessage = "*")]
         [MaxLength(50, ErrorMessage = "Tối đa 50 kí tự.")]
         public string LastName { get; set; } = null!;
-
-        [Required(ErrorMessage = "*")]
+		[Display(Name = "Chức vụ")]
+		[Required(ErrorMessage = "*")]
         [MaxLength(255, ErrorMessage = "Vượt quá số kí tự quy định")]
         public string Tittle { get; set; } = null!;
 
@@ -39,6 +41,10 @@ namespace Workloopz.ViewModels
 
         [Required(ErrorMessage = "*")]
         [MaxLength(100, ErrorMessage = "Tối đa 100 kí tự.")]
-        public string? JobTitle { get; set; } 
-    }
+        [Display(Name = "Chức vụ công việc")]
+        public string? JobTitle { get; set; }
+		public bool? Gender { get; set; } = true;
+		public bool? Status { get; set; } = true;
+		public DateTime? Birthday { get; set; }
+	}
 }

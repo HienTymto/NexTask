@@ -1,0 +1,71 @@
+﻿
+@{
+	var id = ViewContext.RouteData.Values["id"] as string;
+	string projectName = "";
+	int projectID = Int32.Parse(id);
+	if (id != null)
+	{
+		using (var db = new Workloopz.Data.NexTasksContext())
+		{
+			var project = db.Projects.FirstOrDefault(p => p.Id == projectID);
+			if (project != null)
+			{
+				projectName = project.Name; 
+			}
+		}
+	}
+}
+<div class="container mt-3">
+	<div class="row">
+		<div class="col-6 d-flex align-items-center">
+			@* <i class="align-middle me-2" data-feather="thermometer"></i> *@
+			<form class="mb-0">
+				<input type="text" class="h4" style="border: none; background: none;" value="@projectName">
+			</form>
+		</div>
+
+		<div class="col-6 d-flex justify-content-end align-items-center">
+			<div class="mb-2">
+				<i class="align-middle me-2" data-feather="settings"></i> <span class="align-middle">Thiết lập dự án</span>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row bd-highlight mb-3">
+		<div class="p-2 bd-highlight">
+			<a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="@Url.Action("Summery", "Task", new {id = id})">
+			<i class="align-middle me-2" data-feather="layout"></i> <span class="align-middle">Tổng quan</span>
+			</a>
+		</div>
+		<div class="p-2 bd-highlight">
+			<a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="@Url.Action("Board", "Task",new {id = id})">
+			<i class="align-middle me-2" data-feather="layers"></i> <span class="align-middle">Bảng trạng thái</span>
+			</a>
+		</div>
+		<div class="p-2 bd-highlight">
+			<a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="@Url.Action("Gantt", "Task",new {id = id})">
+				<i class="align-middle me-2" data-feather="layers"></i> <span class="align-middle">Tiến độ</span>
+			</a>
+		</div>
+		<div class="p-2 bd-highlight">
+			<a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="@Url.Action("List", "Task", new {id = id})">
+			<i class="align-middle me-2" data-feather="list"></i> <span class="align-middle">Danh sách</span>
+			</a>
+		</div>
+		<div class="p-2 bd-highlight">
+			<a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="@Url.Action("Calendar", "Task",new {id = id})">
+			<i class="align-middle me-2" data-feather="calendar"></i> <span class="align-middle">Lịch trình</span>
+			</a>
+		</div>
+		<div class="p-2 bd-highlight">
+			<a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="@Url.Action("Reports", "Task",new {id = id})">
+			<i class="align-middle me-2" data-feather="bar-chart-2"></i> <span class="align-middle">Báo cáo</span>
+			</a>
+		</div>
+		<div class="p-2 bd-highlight">
+			<a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="@Url.Action("Attackment", "Task",new {id = id})">
+			<i class="align-middle me-2" data-feather="paperclip"></i> <span class="align-middle">Tệp đính kèm</span>
+			</a>
+		</div>
+	</div>
+
+</div>

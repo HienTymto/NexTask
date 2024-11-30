@@ -1,0 +1,91 @@
+﻿@{
+	Layout = "TaskLayout/_TaskLayout";
+	var tasks = ViewBag.Tasks;
+	var id = ViewContext.RouteData.Values["id"];
+	var userIdString = User.FindFirst("UserID")?.Value; // Lấy giá trị từ Claim
+	int userId = userIdString != null ? int.Parse(userIdString) : 0; // Chuyển đổi sang int, gán 0 nếu null
+	DateTime DatetimeNow = DateTime.Now;
+
+}
+@model Workloopz.ViewModels.TaskVM
+<head>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<div class="col-12 col-lg-8 col-xxl-9 d-flex">
+	<div class="card flex-fill">
+		<div class="card-header row my-0">
+			<div class="col-7">
+				<h5 class="card-title mb-0 ">Danh sách nhân viên</h5>
+			</div>
+			<div class="col-4">
+				<a class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Thêm công việc</a>
+			</div>
+		</div>
+		<table class="table table-hover my-0">
+			<thead>
+				<tr>
+					<th>Mã công việc</th>
+					<th class="d-none d-xl-table-cell">Tên công việc</th>
+					<th class="d-none d-xl-table-cell">Mô tả</th>
+					<th class="d-none d-xl-table-cell">Thời gian hoàn thành</th>
+					<th>Trạng thái</th>
+					<th class="d-none d-md-table-cell">Quản lý</th>
+					<th class="d-none d-md-table-cell">Độ ưu tiên</th>
+					<th class="d-none d-md-table-cell">Hành động</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var task in tasks)
+				{
+					<tr>
+						<td>@task.Id</td>
+						<td class="d-none d-xl-table-cell"> @task.Tittle</td>
+						<td class="d-none d-xl-table-cell">@task.Description</td>
+						<td class="d-none d-xl-table-cell">@task.ScheduledTime</td>
+						<td class="d-none d-xl-table-cell">@task.StatusName</td>
+						<td class="d-none d-md-table-cell">@task.TaskOwner</td>
+						<td class="d-none d-md-table-cell">@task.PriorityName</td>
+						<td class="d-none d-md-table-cell">
+						<form asp-action="DeleteTask">
+							<input type="hidden" name="id" value="@task.Id" />
+							<input type="hidden" name="ProjectId" value="@task.ProjectId" />
+							<button type="submit" class="btn btn-danger btn-sm"
+									onclick="return confirm('Bạn chắc chắn muốn xoá @task.Tittle ?');">
+								Xoá
+							</button>
+						</form>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thêm công việc</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form asp-action="CreateTask">
+						<div class="mb-3">
+							<input type="hidden" asp-for="@Model.CreatedDate" value="@DatetimeNow" />
+							<input type="hidden" asp-for="@Model.Updated" value="@DatetimeNow" />
+							<input type="hidden" asp-for="@Model.Owner" value="@userId" />
+							<input type="hidden" asp-for="@Model.ProjectId" value="@id" />
+
+							<label asp-for="@Model.Tittle" class="col-form-label"></label>
+							<input type="text" class="form-control" asp-for="@Model.Tittle">
+						</div>
+						<div class="d-flex justify-content-between">
+
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+							<button type="submit" class="btn btn-primary">Thêm</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

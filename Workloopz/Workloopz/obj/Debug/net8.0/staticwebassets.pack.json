@@ -277,6 +277,230 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\dhtmlxgantt.css",
+      "PackagePath": "staticwebassets\\lib\\codebase\\dhtmlxgantt.css"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\dhtmlxgantt.d.ts",
+      "PackagePath": "staticwebassets\\lib\\codebase\\dhtmlxgantt.d.ts"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\dhtmlxgantt.es.d.ts",
+      "PackagePath": "staticwebassets\\lib\\codebase\\dhtmlxgantt.es.d.ts"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\dhtmlxgantt.es.js",
+      "PackagePath": "staticwebassets\\lib\\codebase\\dhtmlxgantt.es.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\dhtmlxgantt.es.js.map",
+      "PackagePath": "staticwebassets\\lib\\codebase\\dhtmlxgantt.es.js.map"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\dhtmlxgantt.js",
+      "PackagePath": "staticwebassets\\lib\\codebase\\dhtmlxgantt.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\dhtmlxgantt.js.map",
+      "PackagePath": "staticwebassets\\lib\\codebase\\dhtmlxgantt.js.map"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\dhtmlxgantt.css",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\dhtmlxgantt.css"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\dhtmlxgantt.es.js",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\dhtmlxgantt.es.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\dhtmlxgantt.es.js.map",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\dhtmlxgantt.es.js.map"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\dhtmlxgantt.js",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\dhtmlxgantt.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\dhtmlxgantt.js.map",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\dhtmlxgantt.js.map"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\defaults.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\defaults.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\dhtmlxgantt.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\dhtmlxgantt.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\ext.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\ext.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\layout.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\layout.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\layout\\cell.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\layout\\cell.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\layout\\layout.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\layout\\layout.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\lightbox.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\lightbox.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\message.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\message.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\package.json",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\package.json"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\quickinfo.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\quickinfo.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\resource_panel.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\resource_panel.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\rtl.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\rtl.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\scripts.js",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\scripts.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\buttons.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\buttons.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\iconfont\\dhx-gantt-icons.woff",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\iconfont\\dhx-gantt-icons.woff"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\iconfont\\dhx-gantt-icons.woff2",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\iconfont\\dhx-gantt-icons.woff2"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\icons.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\icons.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\arrow\\down.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\arrow\\down.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\arrow\\up.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\arrow\\up.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\close.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\close.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\left_dotted.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\left_dotted.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\left_solid.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\left_solid.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\right_dotted.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\right_dotted.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\right_solid.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\constraint\\right_solid.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\delete.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\delete.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\dots_vertical.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\dots_vertical.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\edit.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\edit.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\menu\\down.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\menu\\down.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\menu\\right.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\menu\\right.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\minus.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\minus.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\plus.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\plus.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\rounded_arrow\\right.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\rounded_arrow\\right.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\imgs\\timer.svg",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\imgs\\timer.svg"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\broadway.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\broadway.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\contrast_black.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\contrast_black.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\contrast_white.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\contrast_white.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\dark.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\dark.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\index.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\index.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\material.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\material.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\meadow.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\meadow.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\skyblue.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\skyblue.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\src\\themes\\variables.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\src\\themes\\variables.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\task.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\task.less"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\tooltip.less",
+      "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\tooltip.less"
+    },
+    {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },

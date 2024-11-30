@@ -23,21 +23,33 @@ public partial class Task
 
     public int PriorityId { get; set; }
 
-    public int TypeId { get; set; }
-
-    public int Creator { get; set; }
-
     public int Owner { get; set; }
+
+    public int? ProjectId { get; set; }
+
+    public DateTime? CreatedDate { get; set; }
+
+    public DateTime? Updated { get; set; }
+
+    public int? Duration { get; set; }
+
+    public decimal? Progress { get; set; }
+
+    public int? ParentId { get; set; }
+
+    public string? Type { get; set; }
 
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
 
-    public virtual User CreatorNavigation { get; set; } = null!;
+    public virtual ICollection<Link> LinkSourceTasks { get; set; } = new List<Link>();
+
+    public virtual ICollection<Link> LinkTargetTasks { get; set; } = new List<Link>();
 
     public virtual User OwnerNavigation { get; set; } = null!;
 
     public virtual Priorite Priority { get; set; } = null!;
 
-    public virtual Status Status { get; set; } = null!;
+    public virtual Project? Project { get; set; }
 
-    public virtual TaskType Type { get; set; } = null!;
+    public virtual Status Status { get; set; } = null!;
 }
