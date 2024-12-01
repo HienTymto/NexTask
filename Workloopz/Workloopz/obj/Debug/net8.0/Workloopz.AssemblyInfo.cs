@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Workloopz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40143231c431ffbcfc726767b41984f405f552f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5da04f29b48a8956fabad1736a875b00976953d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Workloopz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Workloopz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

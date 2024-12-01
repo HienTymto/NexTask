@@ -37,12 +37,12 @@ namespace Workloopz.Controllers
 
         // POST api/task
         [HttpPost]
-        public ObjectResult Post(GanttTaskVM apiTask)
+        public ObjectResult Post(GanttTaskVM ganttChartVM)
         {
             try
             {
                 var userId = Int32.Parse(User.FindFirst("UserID").Value);
-                var newTask = (Data.Task)apiTask;
+                var newTask = (Data.Task)ganttChartVM;
                 newTask.Owner = userId;
 
                 _context.Tasks.Add(newTask);
@@ -64,47 +64,48 @@ namespace Workloopz.Controllers
             
         }
 
-        //// PUT api/task/5
-        //[HttpPut("{id}")]
-        //public ObjectResult? Put(int id, WebApiTask apiTask)
-        //{
-        //    var updatedTask = (Models.Task)apiTask;
-        //    var dbTask = _context.Tasks.Find(id);
-        //    if (dbTask == null)
-        //    {
-        //        return null;
-        //    }
-        //    dbTask.Text = updatedTask.Text;
-        //    dbTask.StartDate = updatedTask.StartDate;
-        //    dbTask.Duration = updatedTask.Duration;
-        //    dbTask.ParentId = updatedTask.ParentId;
-        //    dbTask.Progress = updatedTask.Progress;
-        //    dbTask.Type = updatedTask.Type;
+        // PUT api/task/5
+        [HttpPut("{id}")]
+        public ObjectResult? Put(int id, GanttTaskVM ganttTaskVM)
+        {
 
-        //    _context.SaveChanges();
+            var updatedTask = (Data.Task)ganttTaskVM;
+            var dbTask = _context.Tasks.Find(id);
+            if (dbTask == null)
+            {
+                return null;
+            }
+            dbTask.Tittle = updatedTask.Tittle;
+            dbTask.ScheduledTime = updatedTask.ScheduledTime;
+            dbTask.Duration = updatedTask.Duration;
+            dbTask.ParentId = updatedTask.ParentId;
+            dbTask.Progress = updatedTask.Progress;
+            dbTask.Type = updatedTask.Type;
 
-        //    return Ok(new
-        //    {
-        //        action = "updated"
-        //    });
-        //}
+            _context.SaveChanges();
 
-        //// DELETE api/task/5
-        //[HttpDelete("{id}")]
-        //public ObjectResult DeleteTask(int id)
-        //{
-        //    var task = _context.Tasks.Find(id);
-        //    if (task != null)
-        //    {
-        //        _context.Tasks.Remove(task);
-        //        _context.SaveChanges();
-        //    }
+            return Ok(new
+            {
+                action = "updated"
+            });
+        }
 
-        //    return Ok(new
-        //    {
-        //        action = "deleted"
-        //    });
-        //}
+        // DELETE api/task/5
+        [HttpDelete("{id}")]
+        public ObjectResult DeleteTask(int id)
+        {
+            var task = _context.Tasks.Find(id);
+            if (task != null)
+            {
+                _context.Tasks.Remove(task);
+                _context.SaveChanges();
+            }
+
+            return Ok(new
+            {
+                action = "deleted"
+            });
+        }
     }
 
    

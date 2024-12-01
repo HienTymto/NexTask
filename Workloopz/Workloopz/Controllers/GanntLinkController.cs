@@ -52,38 +52,38 @@ namespace Workloopz.Controllers
         }
 
 
-        //// PUT api/Link/5
-        //[HttpPut("{id}")]
-        //public ObjectResult Put(int id, WebApiLink apiLink)
-        //{
-        //    var updatedLink = (Link)apiLink;
-        //    updatedLink.Id = id;
-        //    _context.Entry(updatedLink).State = EntityState.Modified;
+        // PUT api/Link/5
+        [HttpPut("{id}")]
+        public ObjectResult Put(int id, LinkVM linkVM)
+        {
+            var updatedLink = (Link)linkVM;
+            updatedLink.Id = id;
+            _context.Entry(updatedLink).State = EntityState.Modified;
 
 
-        //    _context.SaveChanges();
+            _context.SaveChanges();
 
-        //    return Ok(new
-        //    {
-        //        action = "updated"
-        //    });
-        //}
+            return Ok(new
+            {
+                action = "updated"
+            });
+        }
 
-        //// DELETE api/Link/5
-        //[HttpDelete("{id}")]
-        //public ObjectResult DeleteLink(int id)
-        //{
-        //    var Link = _context.Links.Find(id);
-        //    if (Link != null)
-        //    {
-        //        _context.Links.Remove(Link);
-        //        _context.SaveChanges();
-        //    }
+        // DELETE api/Link/5
+        [HttpDelete("{id}")]
+        public ObjectResult DeleteLink(int id)
+        {
+            var Link = _context.Links.Find(id);
+            if (Link != null)
+            {
+                _context.Links.Remove(Link);
+                _context.SaveChanges();
+            }
 
-        //    return Ok(new
-        //    {
-        //        action = "deleted"
-        //    });
-        //}
+            return Ok(new
+            {
+                action = "deleted"
+            });
+        }
     }
 }

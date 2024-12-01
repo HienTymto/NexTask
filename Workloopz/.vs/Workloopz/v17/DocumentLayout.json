@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\gantttaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\ganntlinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\ganntlinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\helpers\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\data\\ganttcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\data\\ganttcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\gantt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\gantt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -42,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 375,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,12 +54,11 @@
               "RelativeToolTip": "Workloopz\\Controllers\\HomeController.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAkwC0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T16:49:54.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T16:49:54.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TaskController.cs",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "Workloopz\\Controllers\\TaskController.cs",
@@ -71,8 +66,7 @@
               "RelativeToolTip": "Workloopz\\Controllers\\TaskController.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAQwB4AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T16:48:59.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T16:48:59.074Z"
             },
             {
               "$type": "Document",
@@ -84,21 +78,7 @@
               "RelativeToolTip": "Workloopz\\Helpers\\AutoMapperProfile.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAwBIAAACEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T16:14:26.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GanttContext.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Data\\GanttContext.cs",
-              "RelativeDocumentMoniker": "Workloopz\\Data\\GanttContext.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Data\\GanttContext.cs",
-              "RelativeToolTip": "Workloopz\\Data\\GanttContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T15:00:34.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T16:14:26.552Z"
             },
             {
               "$type": "Document",
@@ -110,21 +90,19 @@
               "RelativeToolTip": "Workloopz\\Controllers\\DataController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T14:47:39.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T14:47:39.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GanntLinkController.cs",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\GanntLinkController.cs",
               "RelativeDocumentMoniker": "Workloopz\\Controllers\\GanntLinkController.cs",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\GanntLinkController.cs",
               "RelativeToolTip": "Workloopz\\Controllers\\GanntLinkController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowEoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T14:44:04.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T14:44:04.87Z"
             },
             {
               "$type": "Document",
@@ -134,14 +112,14 @@
               "RelativeDocumentMoniker": "Workloopz\\Controllers\\GanttTaskController.cs",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\GanttTaskController.cs",
               "RelativeToolTip": "Workloopz\\Controllers\\GanttTaskController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAewDwAAAAWAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAwFAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-30T14:26:49.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Gantt.cshtml",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Gantt.cshtml",
               "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\Gantt.cshtml",
@@ -149,8 +127,7 @@
               "RelativeToolTip": "Workloopz\\Views\\Task\\Gantt.cshtml",
               "ViewState": "AQIAAA4AAAAAAAAAAAAAwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T14:36:03.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T14:36:03.438Z"
             }
           ]
         }
