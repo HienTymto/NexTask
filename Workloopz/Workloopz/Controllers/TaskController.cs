@@ -86,14 +86,15 @@ namespace Workloopz.Controllers
                 PriorityName = taskslect.tsu.p.Name,
                 TaskOwner = taskslect.u.FirstName + " " + taskslect.u.LastName,
                 ProjectId = taskslect.tsu.ts.t.ProjectId
-            });
+            }).Where(taskslect => taskslect.ProjectId == id);
             TempData["ProjectName"] = project.Name;
             ViewBag.Tasks = tasks;
             return View();
         }
         //Hiển thị biểu đồ gantt
-        public IActionResult Gantt()
+        public IActionResult Gantt(int id)
         {
+            HttpContext.Session.SetInt32("projectId", id);
             return View();
         }
         

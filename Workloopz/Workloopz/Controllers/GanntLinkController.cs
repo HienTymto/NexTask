@@ -21,9 +21,11 @@ namespace Workloopz.Controllers
         [HttpGet]
         public IEnumerable<LinkVM> Get()
         {
-            return _context.Links
-                .ToList()
-                .Select(t => (LinkVM)t);
+            
+                return _context.Links
+                   .ToList()
+                   .Select(t => (LinkVM)t);
+            
         }
 
         // GET api/Link/5

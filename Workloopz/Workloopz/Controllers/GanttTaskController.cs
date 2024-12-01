@@ -4,29 +4,32 @@ using Microsoft.AspNetCore.Mvc;
 using Workloopz.Data;
 using Workloopz.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Workloopz.Controllers
 {
     [Produces("application/json")]
     [Route("api/task")]
     public class GanttTaskController : Controller
-	{
+    {
         private readonly NexTasksContext _context;
         public GanttTaskController(NexTasksContext context)
         {
             _context = context;
         }
 
-        // GET api/task
-        [HttpGet]
+       // GET api/task
+       [HttpGet]
         public IEnumerable<GanttTaskVM> Get()
         {
-            return _context.Tasks
-                .ToList()
-                .Select(t => (GanttTaskVM)t);
-        }
+           
+                return _context.Tasks
+               .Select(t => (GanttTaskVM)t)
+               .ToList();
+            
+         }
 
-        // GET api/task/5
+        //GET api/task/5
         [HttpGet("{id}")]
         public Data.Task? Get(int id)
         {
@@ -39,12 +42,18 @@ namespace Workloopz.Controllers
         [HttpPost]
         public ObjectResult Post(GanttTaskVM ganttChartVM)
         {
+            
             try
             {
+                var projectId = HttpContext.Session.GetInt32("projectId");
+                //System.Diagnostics.Debug.WriteLine(projectId == null ? "-1" : projectId);               
                 var userId = Int32.Parse(User.FindFirst("UserID").Value);
                 var newTask = (Data.Task)ganttChartVM;
                 newTask.Owner = userId;
-
+                if (projectId != null)
+                {
+                    newTask.ProjectId = projectId;
+                }
                 _context.Tasks.Add(newTask);
 
                 _context.SaveChanges();
@@ -58,10 +67,10 @@ namespace Workloopz.Controllers
             catch (Exception)
             {
 
-                throw ;
+                throw;
             }
-            
-            
+
+
         }
 
         // PUT api/task/5
@@ -108,5 +117,5 @@ namespace Workloopz.Controllers
         }
     }
 
-   
+
 }

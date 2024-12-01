@@ -18,9 +18,9 @@
             gantt.config.date_format = "%Y-%m-%d %H:%i";
             // initializing gantt
             gantt.init("gantt_here");
-
+            let project_id = window.location.href.substring(window.location.href.lastIndexOf('/')+1)
             // initiating data loading
-            gantt.load("/api/data");
+            gantt.load("/api/data/" + project_id);
             // initializing dataProcessor
             var dp = new gantt.dataProcessor("/api/");
             // and attaching it to gantt

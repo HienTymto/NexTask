@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Workloopz.Controllers
 {
     [Produces("application/json")]
-    [Route("api/data")]
+    [Route("api/data/{id?}")]
 	[ApiController]
 	public class DataController : Controller
 	{
@@ -21,12 +21,22 @@ namespace Workloopz.Controllers
         [HttpGet]
         public object Get()
         {
+             var projectID = RouteData.Values["id"];
+            if (projectID != null && int.TryParse(projectID.ToString(), out var id))
+            {
+                return new
+                {
+                    data = db.Tasks.Where(t => t.ProjectId == id).Select(t => _mapper.Map<GanttTaskVM>(t)).ToList(),
+                    links = db.Links.ToList().Select(l => _mapper.Map<LinkVM>(l))
+                };
+            }
             return new
             {
-                data = db.Tasks.ToList().Select(t => _mapper.Map<GanttTaskVM>(t)),
+                data = db.Tasks.Select(t => _mapper.Map<GanttTaskVM>(t)).ToList(),
                 links = db.Links.ToList().Select(l => _mapper.Map<LinkVM>(l))
 
             };
+
         }
     }
 	

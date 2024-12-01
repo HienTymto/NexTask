@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Workloopz.Data;
 using Workloopz.Helpers;
@@ -16,6 +16,14 @@ builder.Services.AddAuthentication("Cookies")
 		options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
 	});
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+// Cấu hình Session
+builder.Services.AddDistributedMemoryCache();  // Dùng bộ nhớ để lưu trữ session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);  // Thời gian hết hạn session
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -31,6 +39,8 @@ app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseSession();
+
 app.UseAuthentication();
 app.UseAuthorization();
 

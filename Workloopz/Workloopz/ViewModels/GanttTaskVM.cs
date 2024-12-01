@@ -10,6 +10,7 @@ namespace Workloopz.ViewModels
         public decimal? progress { get; set; }
         public int? parent { get; set; }
         public string? type { get; set; }
+        public int? projectId { get; set; }
         public bool open
         {
             get { return true; }
@@ -27,6 +28,7 @@ namespace Workloopz.ViewModels
                 parent = task.ParentId,
                 type = task.Type,
                 progress = task.Progress,
+                projectId = task.ProjectId,
             };
         }
 
@@ -41,7 +43,8 @@ namespace Workloopz.ViewModels
                 Duration = task.duration,
                 ParentId = task.parent,
                 Type = task.type,
-                Progress = task.progress
+                Progress = task.progress,
+                ProjectId = task.projectId,
             };
         }
     }
