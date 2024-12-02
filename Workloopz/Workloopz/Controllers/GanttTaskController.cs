@@ -47,9 +47,16 @@ namespace Workloopz.Controllers
             {
                 var projectId = HttpContext.Session.GetInt32("projectId");
                 //System.Diagnostics.Debug.WriteLine(projectId == null ? "-1" : projectId);               
-                var userId = Int32.Parse(User.FindFirst("UserID").Value);
+                var userId = HttpContext.Session.GetInt32("userId");
+                if (userId == null)
+                {
+                    return BadRequest("Không có giá trị User.");
+                }
                 var newTask = (Data.Task)ganttChartVM;
-                newTask.Owner = userId;
+                
+                
+                    newTask.Owner = userId.Value;
+                
                 if (projectId != null)
                 {
                     newTask.ProjectId = projectId;

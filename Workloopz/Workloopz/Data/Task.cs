@@ -11,7 +11,7 @@ public partial class Task
 
     public string? Description { get; set; }
 
-    public DateTime? ScheduledTime { get; set; }
+    public DateTime ScheduledTime { get; set; }
 
     public DateTime? ActualStart { get; set; }
 
@@ -38,6 +38,8 @@ public partial class Task
     public int? ParentId { get; set; }
 
     public string? Type { get; set; }
+
+    public string? Color { get; set; }
 
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
 

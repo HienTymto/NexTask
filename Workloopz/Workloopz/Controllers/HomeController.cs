@@ -49,8 +49,9 @@ namespace Workloopz.Controllers
                         var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 						await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
                         
-						//Neu dung mat khau chuyen ve dashboard
-						return View("Index");
+                        HttpContext.Session.SetInt32("userId", user.Id);
+                        //Neu dung mat khau chuyen ve dashboard
+                        return View("Index");
                     }
                     else {
                         //Neu sai mat khau  

@@ -100,8 +100,9 @@ namespace Workloopz.Controllers
         
 
 
-        public IActionResult Calendar()
+        public IActionResult Calendar(int id)
         {
+            HttpContext.Session.SetInt32("projectId", id);
             return View();
         }
         public IActionResult Reports()

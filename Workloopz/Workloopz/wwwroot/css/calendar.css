@@ -1,0 +1,12 @@
+﻿#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Đảm bảo lịch hoạt động trên màn hình nhỏ */
+@:media (max-width: 768px) {
+    #calendar {
+        font-size: 0.8em;
+    }
+}

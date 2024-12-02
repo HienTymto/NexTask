@@ -13,19 +13,16 @@ namespace Workloopz.Helpers
             CreateMap<ProjectVM, Project>();
             CreateMap<TaskVM, Workloopz.Data.Task>();
 
-            //// Mapping GanttTaskVM và Task với định dạng tùy chỉnh
-            //CreateMap<Workloopz.Data.Task, GanttTaskVM>()
-            //    .ForMember(dest => dest.Text, opt => opt.MapFrom(src => src.Tittle))
-            //    .ForMember(dest => dest.start_date, opt => opt.MapFrom(src => src.ScheduledTime.HasValue ? src.ScheduledTime.Value.ToString("yyyy-MM-dd") : ""))
-            //    .ForMember(dest => dest.Duration, opt => opt.MapFrom(src => src.Duration))
-            //    .ForMember(dest => dest.Progress, opt => opt.MapFrom(src => src.Progress))
-            //    .ForMember(dest => dest.Parent, opt => opt.MapFrom(src => src.ParentId));
+            CreateMap<CalendarVM, Workloopz.Data.Task>()
+            .ForMember(task => task.Id, option => option.MapFrom(calendar => calendar.id))
+            .ForMember(task => task.Tittle, option => option.MapFrom(calendar => calendar.title))
+            .ForMember(task => task.ScheduledTime, option => option.MapFrom(calendar => calendar.start))
+            .ForMember(task => task.ScheduledEnd, option => option.MapFrom(calendar => calendar.end ))
+            .ForMember(task => task.Description, option => option.MapFrom(calendar => calendar.description))
+            .ForMember(task => task.Color, option => option.MapFrom(calendar => calendar.color))
+            .ReverseMap();
 
-            //// Mapping cho LinkVM và Link với ánh xạ thuộc tính tùy chỉnh
-            //CreateMap<Link, LinkVM>()
-            //    .ForMember(dest => dest.Source, opt => opt.MapFrom(src => src.SourceTaskId))
-            //    .ForMember(dest => dest.Target, opt => opt.MapFrom(src => src.TargetTaskId))
-            //    .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type.ToString()));
+
         }
     }
 }
