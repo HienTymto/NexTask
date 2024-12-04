@@ -24,4 +24,9 @@
     <Folder Include="wwwroot\lib\codebase\sources\less\skins\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\lib\Jkanban\jkanban.js" />
+    <None Include="wwwroot\lib\Jkanban\jkanban.min.js" />
+  </ItemGroup>
+
 </Project>

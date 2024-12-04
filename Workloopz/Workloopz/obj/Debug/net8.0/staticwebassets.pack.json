@@ -101,6 +101,22 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.css",
+      "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.css"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.js",
+      "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.min.css",
+      "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.min.css"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.min.js",
+      "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.min.js"
+    },
+    {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
@@ -503,10 +519,6 @@
     {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\codebase\\sources\\less\\tooltip.less",
       "PackagePath": "staticwebassets\\lib\\codebase\\sources\\less\\tooltip.less"
-    },
-    {
-      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\fullcalendar-6.1.15.zip",
-      "PackagePath": "staticwebassets\\lib\\fullcalendar-6.1.15.zip"
     },
     {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\fullcalendar-6.1.15\\dist\\index.global.js",

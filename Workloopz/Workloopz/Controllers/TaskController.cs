@@ -63,9 +63,10 @@ namespace Workloopz.Controllers
             return View();
         }
         //Hiển thị dưới dạng bảng trạng thái
-        public IActionResult Board()
+        public IActionResult Board(int id)
         {
-            return View();
+			HttpContext.Session.SetInt32("projectId", id);
+			return View();
         }
         //Hiển thị dưới dạng List
         public IActionResult List(int id)

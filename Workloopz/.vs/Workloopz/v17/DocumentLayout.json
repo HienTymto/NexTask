@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "D:\\Doan\\Workloopz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\board.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\board.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\kanbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\kanbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\helpers\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\helpers\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\viewmodels\\gantttaskvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\viewmodels\\gantttaskvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\gantttaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\gantttaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\viewmodels\\kanbanvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\viewmodels\\kanbanvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\gantt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\gantt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,65 +42,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GanttTaskVM.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\GanttTaskVM.cs",
-              "RelativeDocumentMoniker": "Workloopz\\ViewModels\\GanttTaskVM.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\GanttTaskVM.cs",
-              "RelativeToolTip": "Workloopz\\ViewModels\\GanttTaskVM.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAIA1wBkAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:01:16.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GanttTaskController.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\GanttTaskController.cs",
-              "RelativeDocumentMoniker": "Workloopz\\Controllers\\GanttTaskController.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\GanttTaskController.cs",
-              "RelativeToolTip": "Workloopz\\Controllers\\GanttTaskController.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAuwGMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T07:25:09.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CalendarController.cs",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\CalendarController.cs",
               "RelativeDocumentMoniker": "Workloopz\\Controllers\\CalendarController.cs",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\CalendarController.cs",
               "RelativeToolTip": "Workloopz\\Controllers\\CalendarController.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAG8AAAAnAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBkAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T07:13:19.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AutoMapperProfile.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Helpers\\AutoMapperProfile.cs",
-              "RelativeDocumentMoniker": "Workloopz\\Helpers\\AutoMapperProfile.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Helpers\\AutoMapperProfile.cs",
-              "RelativeToolTip": "Workloopz\\Helpers\\AutoMapperProfile.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAABMAAABkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T07:05:28.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T08:54:46.746Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Calendar.cshtml",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Calendar.cshtml",
-              "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\Calendar.cshtml",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Calendar.cshtml",
-              "RelativeToolTip": "Workloopz\\Views\\Task\\Calendar.cshtml",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwD4AAABDAAAA",
+              "Title": "KanbanController.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\KanbanController.cs",
+              "RelativeDocumentMoniker": "Workloopz\\Controllers\\KanbanController.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\KanbanController.cs",
+              "RelativeToolTip": "Workloopz\\Controllers\\KanbanController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAUwDgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T08:54:38.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Board.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Board.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\Board.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Board.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Task\\Board.cshtml",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAqwIkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T02:38:28.863Z",
+              "WhenOpened": "2024-12-03T16:09:22.14Z",
               "EditorCaption": ""
             },
             {
@@ -119,33 +86,33 @@
               "RelativeDocumentMoniker": "Workloopz\\Controllers\\TaskController.cs",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\TaskController.cs",
               "RelativeToolTip": "Workloopz\\Controllers\\TaskController.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAADwv2AAAAAMAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAowEMAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T16:48:59.074Z"
+              "WhenOpened": "2024-12-04T08:56:19.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DataController.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\DataController.cs",
-              "RelativeDocumentMoniker": "Workloopz\\Controllers\\DataController.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\DataController.cs",
-              "RelativeToolTip": "Workloopz\\Controllers\\DataController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "AutoMapperProfile.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Helpers\\AutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "Workloopz\\Helpers\\AutoMapperProfile.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Helpers\\AutoMapperProfile.cs",
+              "RelativeToolTip": "Workloopz\\Helpers\\AutoMapperProfile.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAABkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T07:19:17.209Z"
+              "WhenOpened": "2024-12-04T08:44:24.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Gantt.cshtml",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Gantt.cshtml",
-              "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\Gantt.cshtml",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Gantt.cshtml",
-              "RelativeToolTip": "Workloopz\\Views\\Task\\Gantt.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T07:30:31.834Z"
+              "DocumentIndex": 4,
+              "Title": "KanbanVM.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\KanbanVM.cs",
+              "RelativeDocumentMoniker": "Workloopz\\ViewModels\\KanbanVM.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\KanbanVM.cs",
+              "RelativeToolTip": "Workloopz\\ViewModels\\KanbanVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T08:40:40.232Z"
             }
           ]
         }

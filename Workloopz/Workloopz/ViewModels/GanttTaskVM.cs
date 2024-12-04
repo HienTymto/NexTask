@@ -23,7 +23,7 @@ namespace Workloopz.ViewModels
             {
                 id = task.Id,
                 text = task.Tittle,
-                start_date = task.ScheduledTime.ToString("yyyy-MM-dd HH:mm"),
+                start_date = task.ScheduledTime.Value.ToString("yyyy-MM-dd HH:mm"),
                 duration = task.Duration,
                 parent = task.ParentId,
                 type = task.Type,

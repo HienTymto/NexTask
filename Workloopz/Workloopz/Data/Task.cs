@@ -11,7 +11,7 @@ public partial class Task
 
     public string? Description { get; set; }
 
-    public DateTime ScheduledTime { get; set; }
+    public DateTime? ScheduledTime { get; set; }
 
     public DateTime? ActualStart { get; set; }
 
