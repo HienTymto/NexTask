@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wI/jDjxdwtTOwN7TOBMMsvEUvBkXIi9aW/MNtl8UQ4U=",
+  "Hash": "4T9Z2sHIxDe3oGvMEDMAb/GF5sTQVGPace3l/3tFqEg=",
   "Source": "Workloopz",
   "BasePath": "_content/Workloopz",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\calendar.css"
+    },
+    {
+      "Identity": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\css\\kanban.css",
+      "SourceId": "Workloopz",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\",
+      "BasePath": "_content/Workloopz",
+      "RelativePath": "css/kanban.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\kanban.css"
     },
     {
       "Identity": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\css\\main.css",
@@ -490,6 +509,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\global.js"
+    },
+    {
+      "Identity": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\kanban.js",
+      "SourceId": "Workloopz",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\",
+      "BasePath": "_content/Workloopz",
+      "RelativePath": "js/kanban.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\kanban.js"
     },
     {
       "Identity": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\site.js",

@@ -1,190 +1,196 @@
 ﻿@{
-    Layout = "TaskLayout/_TaskLayout";
+	Layout = "TaskLayout/_TaskLayout";
 }
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kanban Board</title>
-    <link rel="stylesheet" href="~/lib/Jkanban/jkanban.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script>
-    <style>
-        body {
-            font-family: "Lato";
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Kanban Board</title>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet" href="~/lib/Jkanban/jkanban.min.css" />
+	<link href="~/css/kanban.css" rel="stylesheet"/>
+	<style>
+		body {
+			
+			margin: 0;
+			padding: 0;
+		
+			background-color: #f8f8f8;
+		}
 
-        #myKanban {
-            overflow-x: auto;
-            padding: 20px 0;
-        }
+		#myKanban {
+			overflow-x: auto;
+			padding: 20px 0;
+		}
 
-        .success {
-            background: #00b961;
-        }
+		.success {
+			background: #00b961;
+		}
 
-        .info {
-            background: #2a92bf;
-        }
+		.info {
+			background: #2a92bf;
+		}
 
-        .warning {
-            background: #f4ce46;
-        }
+		.warning {
+			background: #f4ce46;
+		}
 
-        .error {
-            background: #fb7d44;
-        }
+		.error {
+			background: #fb7d44;
+		}
 
-        .custom-button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 7px 15px;
-            margin: 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-        }
-    </style>
+		.custom-button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 7px 15px;
+			margin: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+		.form-control:hover {
+			background-color: #F5F5F5; /* Thay đổi màu viền */
+			
+		}
+
+		
+	</style>
 </head>
 <body>
-    <div id="myKanban"></div>
-    @* <button id="addDefault">Add "Default" board</button>
-    <br />
-    <button id="addToDo">Add element in "To Do" Board</button>
-    <br />
-    <button id="addToDoAtPosition">Add element in "To Do" Board at position 2</button>
-    <br />
-    <button id="removeBoard">Remove "Done" Board</button>
-    <br />
-    <button id="removeElement">Remove "My Task Test"</button> *@
+	<div id="myKanban"></div>
+	
+	<script src="~/lib/Jkanban/jkanban.js"></script>
+	<script src="~/js/kanban.js"></script>
 
-    <script src="~/lib/Jkanban/jkanban.js"></script>
-    <script>
-        fetch('/api/kanban/data')
-            .then(response => response.json())
-            .then(data => {     
-                var KanbanTest = new jKanban({
-                    element: "#myKanban",
-                    gutter: "10px",
-                    widthBoard: "450px",
-                    dragBoards: false,
-                    dragItems: true,
-                    itemHandleOptions: {
-                        enabled: true, // Bật kéo cho các item
-                    },
-                    click: function (el) {
-                        console.log("Trigger on all items click!");
-                    },
-                    context: function (el, e) {
-                        console.log("Trigger on all items right-click!");
-                    },
-                    dropEl: function (el, target, source, sibling) {
-                        const taskId = el.dataset.eid; // ID của task
-                        const newStatusId = target.parentElement.getAttribute('data-id'); // ID của board mới
-                        console.log(`Moved Task ID ${taskId} to Board ID ${newStatusId}`);
+	<!-- Modal HTML -->
+	<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true" >
+		<div class="modal-dialog modal-dialog-centered" style="max-width: 75vw;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="taskTitle"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body ">
+					<div class="container-fluid">
+						<div class="row">
+							
+							
+						</div>
+						<div class="row">
+							<div class="col-md-7 ms-auto" id="left-content">
+								<form>
+									<div class="mb-3">
+										<label for="description" class="form-label fw-bold">Mô tả: </label>
+										<input type="text" class="form-control border-0" id="description" placeholder="Thêm mô tả...">
+									</div>
+									<button type="submit" id="submitBtn" class="btn btn-primary" style="display: none;">Lưu</button>
+								</form>
+								<h2>Activity</h2>
 
-                        // Cập nhật thông tin task trong database nếu cần thiết
-                        // Gửi yêu cầu cập nhật trạng thái task
-                        fetch('/api/updateTaskStatus', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ taskId, newStatusId }),
-                        })
-                            .then(response => {
-                                if (!response.ok) {
-                                    console.error("Failed to update task");
-                                }
-                            })
-                            .catch(error => console.error("Error:", error));
-                    },
-                    buttonClick: function (el, boardId) {
-                        console.log(el);
-                        console.log(boardId);
-                        var formItem = document.createElement("form");
-                        formItem.setAttribute("class", "itemform");
-                        formItem.innerHTML =
-                            '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div><div class="form-group"><button type="submit" class="btn btn-primary btn-xs pull-right">Submit</button><button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button></div>';
+								<!-- Chọn tab Comments -->
+								<div class="tabs">
+									<button class="tab-button">All</button>
+									<button class="tab-button active">Comments</button>
+									<button class="tab-button">History</button>
+									<button class="tab-button">Work log</button>
+								</div>
 
-                        KanbanTest.addForm(boardId, formItem);
-                        formItem.addEventListener("submit", function (e) {
-                            e.preventDefault();
-                            var text = e.target[0].value;
-                            KanbanTest.addElement(boardId, {
-                                title: text
-                            });
-                            formItem.parentNode.removeChild(formItem);
-                        });
-                        document.getElementById("CancelBtn").onclick = function () {
-                            formItem.parentNode.removeChild(formItem);
-                        };
-                    },
-                    itemAddOptions: {
-                        enabled: true,
-                        content: '+ Add New Card',
-                        class: 'custom-button',
-                        footer: true
-                    },
-                    boards: data.map(board => ({
-                        id: board.id.toString(),
-                        title: board.title,
-                        dragTo: data
-                            .filter(b => b.id.toString() !== board.id.toString())  // Cho phép kéo vào các board khác, không cho kéo vào chính nó
-                            .map(b => b.id.toString()),
-                        item: board.item.map(task => ({
-                            id: task.id.toString(),
-                            title: task.title
-                            
-                        }))
-                    }))
-                });
-                console.log(KanbanTest)
-                // Các nút để thêm mới task, board và xóa
-                // var toDoButton = document.getElementById("addToDo");
-                // toDoButton.addEventListener("click", function () {
-                //     KanbanTest.addElement("_todo", {
-                //         title: "Test Add"
-                //     });
-                // });
+								<!-- Các bình luận -->
+								<div class="comment-section">
+									<div class="comment">
+										<div class="comment-header">
+											<span class="username">vu van hien</span>
+											<span class="time">2 days ago</span>
+										</div>
+										<div class="comment-body">
+											alo
+										</div>
+										<div class="comment-actions">
+											<button class="edit-btn">Edit</button>
+											<button class="delete-btn">Delete</button>
+										</div>
+									</div>
+								<!-- Form để thêm comment mới -->
+								<div class="comment-form">
+									<textarea id="commentText" placeholder="Add a comment..."></textarea>
+									<button id="submitComment" class="submit-btn">Post</button>
+								</div>
 
-                // var toDoButtonAtPosition = document.getElementById("addToDoAtPosition");
-                // toDoButtonAtPosition.addEventListener("click", function () {
-                //     KanbanTest.addElement("_todo", {
-                //         title: "Test Add at Pos"
-                //     }, 1);
-                // });
+								<div class="emojis">
+									<button class="emoji">🎉 Looks good!</button>
+									<button class="emoji">🙋 Need help?</button>
+									<button class="emoji">🚫 This is blocked...</button>
+									<button class="emoji">🔍 Can you clarify...?</button>
+									<button class="emoji">✅ Thanks</button>
+								</div>
+							</div>
+							
+							<div class="col-md-5 ms-auto" id="right-content">
+								<strong>Tiêu đề:</strong> <span id="taskTitle"></span>
 
-                // var addBoardDefault = document.getElementById("addDefault");
-                // addBoardDefault.addEventListener("click", function () {
-                //     KanbanTest.addBoards([{
-                //         id: "_default",
-                //         title: "Kanban Default",
-                //         item: [
-                //             { title: "Default Task 1" },
-                //             { title: "Default Task 2" }
-                //         ]
-                //     }]);
-                // });
+								<h2>Task Details</h2>
 
-                // var removeBoard = document.getElementById("removeBoard");
-                // removeBoard.addEventListener("click", function () {
-                //     KanbanTest.removeBoard("_done");
-                // });
+								<div class="task-details">
+									<div class="task-info">
+										<div class="task-item">
+											<strong>Assignee:</strong>
+											<span>Unassigned <a href="#">Assign to me</a></span>
+										</div>
+										<div class="task-item">
+											<strong>Reporter:</strong>
+											<span>vu van hien</span>
+										</div>
+										<div class="task-item">
+											<strong>Priority:</strong>
+											<span>Medium</span>
+										</div>
+										<div class="task-item">
+											<strong>Labels:</strong>
+											<span>None</span>
+										</div>
+										<div class="task-item">
+											<strong>Due date:</strong>
+											<span>Dec 01, 2024</span>
+										</div>
+										<div class="task-item">
+											<strong>Start date:</strong>
+											<span>Nov 16, 2024</span>
+										</div>
+										<div class="task-item">
+											<strong>Category:</strong>
+											<span>None</span>
+										</div>
+										<div class="task-item">
+											<strong>Team:</strong>
+											<span>None</span>
+										</div>
+									</div>
 
-                // var removeElement = document.getElementById("removeElement");
-                // removeElement.addEventListener("click", function () {
-                //     KanbanTest.removeElement("_test_delete");
-                // });
-            })
-            .catch(error => console.error("Error loading boards:", error));
-    </script>
+									<!-- Time Tracking -->
+									<div class="time-tracking">
+										<strong>Time tracking:</strong>
+										<div class="progress-bar">
+											<div class="progress" style="width: 66%;">2w logged</div>
+											<div class="remaining-time">1d remaining</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
-</html>
 
 </html>
+
+

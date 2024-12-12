@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\css\calendar.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\kanban.css" />
   </ItemGroup>
 
   <ItemGroup>

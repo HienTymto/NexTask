@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\calendar.css"
     },
     {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\css\\kanban.css",
+      "PackagePath": "staticwebassets\\css\\kanban.css"
+    },
+    {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },
@@ -95,6 +99,10 @@
     {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\global.js",
       "PackagePath": "staticwebassets\\js\\global.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\kanban.js",
+      "PackagePath": "staticwebassets\\js\\kanban.js"
     },
     {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\site.js",
