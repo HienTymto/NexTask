@@ -59,6 +59,7 @@ public partial class NexTasksContext : DbContext
         {
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Contents).HasColumnType("text");
+            entity.Property(e => e.CreateAt).HasColumnType("datetime");
             entity.Property(e => e.TaskId).HasColumnName("TaskID");
             entity.Property(e => e.UserId).HasColumnName("UserID");
 

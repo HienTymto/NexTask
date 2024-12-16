@@ -142,3 +142,10 @@ D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\Workloopz.genruntimeconfig.cache
 D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\ref\Workloopz.dll
 D:\Doan\Workloopz\Workloopz\obj\Debug\net8.0\Workloopz.sourcelink.json
 D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\AutoMapper.dll
+D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\Microsoft.Owin.dll
+D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\Microsoft.Owin.Host.SystemWeb.dll
+D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Doan\Workloopz\Workloopz\bin\Debug\net8.0\Owin.dll

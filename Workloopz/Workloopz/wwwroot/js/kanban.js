@@ -14,7 +14,8 @@
                 const taskId = el.dataset.eid; // Lấy ID của task khi nhấp vào
                 document.getElementById('taskTitle').innerText = el.innerText;
                 var taskModal = new bootstrap.Modal(document.getElementById('taskModal'));
-                taskModal.show();
+               
+                 openTaskModal(el);
             },
             context: function (el, e) {
                 console.log("Trigger on all items right-click!");
@@ -120,4 +121,97 @@ document.addEventListener('DOMContentLoaded', function () {
         cancelBtn.style.display = 'none';
     });
 });
+// Kết nối SignalR
+const connection = new signalR.HubConnectionBuilder()
+    .withUrl("/chatHub")
+    .build();
+
+// Nhận bình luận mới từ server
+connection.on("ReceiveMessage", (user, message, taskId) => {
+    const currentTaskId = document.getElementById("taskModal").getAttribute("data-task-id");
+    if (currentTaskId === taskId) {
+        const commentHtml = `
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="username">${user}</span>
+                    <span class="time">Just now</span>
+                </div>
+                <div class="comment-body">
+                    ${message}
+                </div>
+            </div>
+        `;
+        document.getElementById("commentsList").innerHTML += commentHtml;
+    }
+});
+
+// Kết nối đến SignalR server
+connection.start()
+    .then(() => console.log("SignalR connected"))
+    .catch(err => console.error("SignalR error: ", err));
+
+// Gửi bình luận mới
+function sendComment(taskId) {
+    const user = "YourUserName"; // TODO: Lấy từ session hoặc backend
+    const message = document.getElementById("commentText").value;
+
+    if (message.trim() !== "") {
+        connection.invoke("SendMessage", user, message, taskId)
+            .then(() => {
+                document.getElementById("commentText").value = ""; // Xóa nội dung sau khi gửi
+            })
+            .catch(err => console.error("Error sending message: ", err));
+    } else {
+        alert("Comment cannot be empty.");
+    }
+}
+
+// Thêm sự kiện cho nút Post
+document.getElementById("submitComment").addEventListener("click", () => {
+    const taskId = document.getElementById("taskModal").getAttribute("data-task-id");
+    sendComment(taskId);
+});
+
+// Reset modal khi mở
+function resetModal(taskId) {
+    document.getElementById("commentsList").innerHTML = "";
+    document.getElementById("commentText").value = "";
+    console.log("task id: " + taskId);
+    // Lấy các comment cũ từ API
+    fetch(`/api/Comment/GetComments?taskId=${taskId}`)
+        .then(response => response.json())
+        .then(data => {
+            const commentsList = document.getElementById("commentsList");
+            data.forEach(comment => {
+                const commentHtml = `
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">${comment.user}</span>
+                            <span class="time">${new Date(comment.createdAt).toLocaleString()}</span>
+                        </div>
+                        <div class="comment-body">
+                            ${comment.content}
+                        </div>
+                    </div>
+                `;
+                commentsList.innerHTML += commentHtml;
+            });
+        })
+        .catch(err => console.error("Error loading comments: ", err));
+}
+
+// Khi click vào một task trên Kanban
+function openTaskModal(el) {
+    const taskId = el.dataset.eid;
+    document.getElementById("taskModal").setAttribute("data-task-id", taskId);
+    document.getElementById("taskTitle").innerText = el.innerText;
+   
+    resetModal(taskId);
+    
+
+    const taskModal = new bootstrap.Modal(document.getElementById("taskModal"));
+    taskModal.show();
+}
+
+
 

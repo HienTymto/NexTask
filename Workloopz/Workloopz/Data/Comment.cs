@@ -13,6 +13,8 @@ public partial class Comment
 
     public int Id { get; set; }
 
+    public DateTime? CreateAt { get; set; }
+
     public virtual Task Task { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;

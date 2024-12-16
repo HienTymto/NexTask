@@ -10,13 +10,11 @@
 	<title>Kanban Board</title>
 	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 	<link rel="stylesheet" href="~/lib/Jkanban/jkanban.min.css" />
-	<link href="~/css/kanban.css" rel="stylesheet"/>
+	<link href="~/css/kanban.css" rel="stylesheet" />
 	<style>
 		body {
-			
 			margin: 0;
 			padding: 0;
-		
 			background-color: #f8f8f8;
 		}
 
@@ -55,20 +53,18 @@
 
 		.form-control:hover {
 			background-color: #F5F5F5; /* Thay đổi màu viền */
-			
 		}
 
-		
 	</style>
 </head>
 <body>
 	<div id="myKanban"></div>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.0/signalr.min.js"></script>
 	<script src="~/lib/Jkanban/jkanban.js"></script>
 	<script src="~/js/kanban.js"></script>
 
 	<!-- Modal HTML -->
-	<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true" >
+	<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" style="max-width: 75vw;">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -77,10 +73,7 @@
 				</div>
 				<div class="modal-body ">
 					<div class="container-fluid">
-						<div class="row">
-							
-							
-						</div>
+						
 						<div class="row">
 							<div class="col-md-7 ms-auto" id="left-content">
 								<form>
@@ -102,93 +95,146 @@
 
 								<!-- Các bình luận -->
 								<div class="comment-section">
-									<div class="comment">
-										<div class="comment-header">
-											<span class="username">vu van hien</span>
-											<span class="time">2 days ago</span>
-										</div>
-										<div class="comment-body">
-											alo
-										</div>
-										<div class="comment-actions">
-											<button class="edit-btn">Edit</button>
-											<button class="delete-btn">Delete</button>
-										</div>
+									<div id="commentsList">
+										<!-- Các comment sẽ được thêm vào đây thông qua SignalR -->
 									</div>
+								</div>
+
 								<!-- Form để thêm comment mới -->
 								<div class="comment-form">
 									<textarea id="commentText" placeholder="Add a comment..."></textarea>
 									<button id="submitComment" class="submit-btn">Post</button>
 								</div>
 
-								<div class="emojis">
-									<button class="emoji">🎉 Looks good!</button>
-									<button class="emoji">🙋 Need help?</button>
-									<button class="emoji">🚫 This is blocked...</button>
-									<button class="emoji">🔍 Can you clarify...?</button>
-									<button class="emoji">✅ Thanks</button>
-								</div>
 							</div>
-							
-							<div class="col-md-5 ms-auto" id="right-content">
-								<strong>Tiêu đề:</strong> <span id="taskTitle"></span>
 
-								<h2>Task Details</h2>
+								<div class="col-md-5 ms-auto" id="right-content">
+									<strong>Tiêu đề:</strong> <span id="taskTitle"></span>
 
-								<div class="task-details">
-									<div class="task-info">
-										<div class="task-item">
-											<strong>Assignee:</strong>
-											<span>Unassigned <a href="#">Assign to me</a></span>
-										</div>
-										<div class="task-item">
-											<strong>Reporter:</strong>
-											<span>vu van hien</span>
-										</div>
-										<div class="task-item">
-											<strong>Priority:</strong>
-											<span>Medium</span>
-										</div>
-										<div class="task-item">
-											<strong>Labels:</strong>
-											<span>None</span>
-										</div>
-										<div class="task-item">
-											<strong>Due date:</strong>
-											<span>Dec 01, 2024</span>
-										</div>
-										<div class="task-item">
-											<strong>Start date:</strong>
-											<span>Nov 16, 2024</span>
-										</div>
-										<div class="task-item">
-											<strong>Category:</strong>
-											<span>None</span>
-										</div>
-										<div class="task-item">
-											<strong>Team:</strong>
-											<span>None</span>
-										</div>
-									</div>
+									<h2>Task Details</h2>
 
-									<!-- Time Tracking -->
-									<div class="time-tracking">
-										<strong>Time tracking:</strong>
-										<div class="progress-bar">
-											<div class="progress" style="width: 66%;">2w logged</div>
-											<div class="remaining-time">1d remaining</div>
+									<div class="task-details">
+										<div class="task-info">
+											<div class="task-item">
+												<strong>Assignee:</strong>
+												<span>Unassigned <a href="#">Assign to me</a></span>
+											</div>
+											<div class="task-item">
+												<strong>Reporter:</strong>
+												<span>vu van hien</span>
+											</div>
+											<div class="task-item">
+												<strong>Priority:</strong>
+												<span>Medium</span>
+											</div>
+											<div class="task-item">
+												<strong>Labels:</strong>
+												<span>None</span>
+											</div>
+											<div class="task-item">
+												<strong>Due date:</strong>
+												<span>Dec 01, 2024</span>
+											</div>
+											<div class="task-item">
+												<strong>Start date:</strong>
+												<span>Nov 16, 2024</span>
+											</div>
+											<div class="task-item">
+												<strong>Category:</strong>
+												<span>None</span>
+											</div>
+											<div class="task-item">
+												<strong>Team:</strong>
+												<span>None</span>
+											</div>
+										</div>
+
+										<!-- Time Tracking -->
+										<div class="time-tracking">
+											<strong>Time tracking:</strong>
+											<div class="progress-bar">
+												<div class="progress" style="width: 66%;">2w logged</div>
+												<div class="remaining-time">1d remaining</div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
 
-						</div>						
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
+		
+	@* <script type="text/javascript">
+		// Kết nối SignalR
+		const connection = new signalR.HubConnectionBuilder()
+			.withUrl("/chatHub")
+			.build();
+
+		// Khi nhận comment mới từ server
+		connection.on("ReceiveMessage", (user, message) => {
+			const commentHtml = `
+					<div class="comment">
+						<div class="comment-header">
+							<span class="username">${user}</span>
+							<span class="time">Just now</span>
+						</div>
+						<div class="comment-body">
+							${message}
+						</div>
+					</div>
+				`;
+			document.getElementById("commentsList").innerHTML += commentHtml;
+		});
+
+		// Xử lý kết nối SignalR
+		connection.start()
+			.then(() => {
+				console.log("SignalR connected.");
+			})
+			.catch(err => console.error("SignalR error: ", err));
+
+		// Gửi bình luận mới
+		function sendComment() {
+			const user = "YourUserName"; // TODO: Lấy tên từ session hoặc backend
+			const message = document.getElementById("commentText").value;
+
+			if (message.trim() !== "") {
+				connection.invoke("SendMessage", user, message)
+					.then(() => {
+						document.getElementById("commentText").value = ""; // Xóa nội dung sau khi gửi
+					})
+					.catch(err => console.error("Error sending message: ", err));
+			} else {
+				alert("Comment cannot be empty.");
+			}
+		}
+
+		// Thêm sự kiện click cho nút Post
+		document.getElementById("submitComment").addEventListener("click", sendComment);
+
+		// Thêm sự kiện Enter để gửi bình luận
+		document.getElementById("commentText").addEventListener("keypress", (event) => {
+			if (event.key === "Enter" && !event.shiftKey) {
+				event.preventDefault(); // Ngăn xuống dòng
+				sendComment();
+			}
+		});
+
+		// Reset nội dung modal khi mở task mới
+		function resetModal() {
+			document.getElementById("commentsList").innerHTML = "";
+			document.getElementById("commentText").value = "";
+		}
+
+		// Gọi hàm reset khi mở modal (tích hợp vào sự kiện mở modal của bạn)
+		document.getElementById("taskModal").addEventListener("show.bs.modal", resetModal);
+	</script>
+ *@
+	
 </body>
 
 </html>

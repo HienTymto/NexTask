@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Workloopz.Data;
 using Workloopz.Helpers;
 
+using Microsoft.AspNet.SignalR;
+using Workloopz;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,6 +26,9 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+// Real-time
+builder.Services.AddControllersWithViews();
+builder.Services.AddSignalR();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -43,7 +48,9 @@ app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseEndpoints(endpoints => {
+    endpoints.MapHub<ChatHub>("/chatHub");
+});
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Login}/{id?}");

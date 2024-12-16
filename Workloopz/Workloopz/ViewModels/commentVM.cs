@@ -9,6 +9,6 @@
 		public int TaskId { get; set; }
 
 		public int Id { get; set; }
-
+		public DateTime? CreateAt { get; set; }
 	}
 }
