@@ -1,7 +1,14 @@
 ﻿.modal-body {
     max-height: 75vh; /* Giới hạn chiều cao tối đa */
 }
-
+.kanban-footer {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    min-height: 40px; /* Chiều cao tối thiểu để chứa form */
+    position: relative;
+}
 #left-content {
     max-height: 70vh; /* Giới hạn chiều cao tối đa */
     overflow-y: auto; /* Thêm thanh cuộn dọc */
@@ -15,8 +22,6 @@
     padding-left: 10px; /* Khoảng cách với nội dung bên trái */
 }
 /* General Styles */
-
-
 h2 {
     font-size: 24px;
     margin: 20px 0;
@@ -140,6 +145,7 @@ h2 {
 }
 
 .task-item {
+
     margin-bottom: 15px;
     font-size: 14px;
 }

@@ -81,7 +81,8 @@ namespace Workloopz.Controllers
 					Tittle = kanbanVM.title ,
 					StatusId = kanbanVM.status,  // statusId từ request
 					Owner = userId.Value,
-					ProjectId = projectId  
+					ProjectId = projectId,
+					ScheduledTime = DateTime.UtcNow,
 				};
 				if (projectId != null)
 				{

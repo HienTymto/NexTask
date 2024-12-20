@@ -4,9 +4,53 @@
 	var CreatedTask = ViewBag.CreatedTask;
 	var UpdateTask = ViewBag.UpdateTasks;
 }
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	
+	<style>
+		#dataList {
+			list-style-type: none;
+			padding-left: 0;
+			padding-top:30px;
+		}
+			#dataList li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 10px 10px 30px; 
+			}
+
+				#dataList li:hover{
+					background-color: lightgray;
+				}
+				#dataList li::before {
+					content: '';
+					width: 15px; 
+					height: 15px; 
+					background-color: #000; 
+					margin-right: 15px;
+				}
+				#dataList li:nth-child(1)::before {
+					background-color: #dee2e6; 
+				}
+				#dataList li:nth-child(2)::before {
+					background-color: #007bff; 
+				}
+
+				#dataList li:nth-child(3)::before {
+					background-color: #28a745; 
+				}
+				#dataList li:nth-child(n+4)::before {
+					background-color: #000;
+				}
+		.count {
+			margin-left: auto; 
+		}
+	</style>
+
 </head>
+<body>
 <div class="row">
 	@*Done*@<div class="col-3 px-2">
 		<div class="card">
@@ -92,3 +136,95 @@
 			</div>
 		</div>
 	</div>
+</div>
+	<div class="col-12 col-lg-6">
+		<div class="card">
+			<div class="card-header">
+				<h5 class="card-title">Biểu đồ tổng quan</h5>
+				
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="chart chart-sm col-7">
+						<canvas id="chartjs-doughnut"></canvas>
+					</div>
+					<div class="col-5">
+						<ul id="dataList">
+							
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+	
+	<script>
+		
+		document.addEventListener("DOMContentLoaded", function () {	
+			const apiUrl = '/api/summery/pieStatus';
+			fetch(apiUrl)
+				.then(response => response.json()) 
+				.then(data => {
+					var dataList = document.getElementById('dataList');
+					dataList.innerHTML = '';  
+					data.labels.forEach((label, index) => {
+						var count = data.datasets[0].data[index]; 
+						dataList.innerHTML += `
+								<li>
+									<span>${label}</span>
+									<span class="count">${count}</span>
+								</li>
+							`;
+					});
+					new Chart(document.getElementById("chartjs-doughnut"), {
+						type: "doughnut",
+						data: {
+							labels: data.labels, 
+							datasets: data.datasets
+						},
+						options: {
+							maintainAspectRatio: false,
+							cutoutPercentage: 65,
+							responsive: true,
+							legend: {
+								display: false
+							},
+							tooltips: {
+								callbacks: {
+									label: function (tooltipItem, data) {
+										const dataset = data.datasets[tooltipItem.datasetIndex];
+										const currentValue = dataset.data[tooltipItem.index];
+										const total = dataset.data.reduce((acc, value) => acc + value, 0);
+										const percentage = Math.floor((currentValue / total) * 100);
+										return `${data.labels[tooltipItem.index]}: ${percentage}%`;
+									}
+								}
+							},
+							plugins: {
+
+								doughnutlabel: {
+									labels: [
+										{
+											text: function (chart) {
+												const total = 100;
+												return total;
+											},
+											font: {
+												size: 30
+											}
+										}
+									]
+								}
+							}
+						}
+					});
+				})
+				.catch(error => {
+					console.error('Fetch error:', error);
+				});
+		});
+
+	</script>
+</body>

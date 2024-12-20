@@ -1,7 +1,9 @@
-.kanban-container {
-  position: relative;
-  box-sizing: border-box;
-  width: auto;
+﻿.kanban-container {
+    position: relative;
+    box-sizing: border-box;
+    width: auto;
+    display: flex; /* Sử dụng Flexbox để bố trí các phần tử con */
+    flex-direction: row; /* Để các cột xếp theo chiều dọc */
 }
 
 .kanban-container * {
@@ -15,10 +17,13 @@
 }
 
 .kanban-board {
-  position: relative;
-  float: left;
-  background: #e2e4e6;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    max-height: 50vh; /* Giới hạn chiều cao tối đa của bảng Kanban */
+    border-radius: 10px;
+    max-width: 22%;
+    background: #F8F8F8;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 .kanban-board.disabled-board {
@@ -34,10 +39,14 @@
   padding-right: 50px;
 }
 
-.kanban-board header {
-  font-size: 16px;
-  padding: 15px;
-}
+    .kanban-board header {
+        font-size: 16px;
+        padding: 15px;
+        background-color: #e2e4e6; /* Để phân biệt header với phần body */
+        flex-shrink: 0; /* Đảm bảo header không co lại */
+        text-align: center;
+        border-radius:10px 10px 0px 0px;
+    }
 
 .kanban-board header .kanban-title-board {
   font-weight: 700;
@@ -50,10 +59,12 @@
   float: right;
 }
 
-.kanban-board .kanban-drag {
-  min-height: 200px;
-  padding: 20px;
-}
+    .kanban-board .kanban-drag {
+        flex-grow: 1; /* Phần body sẽ chiếm phần còn lại */
+        overflow-y: auto; /* Hiển thị thanh cuộn khi cần */
+        padding: 20px;
+        min-height: 200px; /* Đảm bảo có đủ không gian để task item */
+    }
 
 .kanban-board:after {
   clear: both;

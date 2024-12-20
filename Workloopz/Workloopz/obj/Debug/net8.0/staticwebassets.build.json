@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4T9Z2sHIxDe3oGvMEDMAb/GF5sTQVGPace3l/3tFqEg=",
+  "Hash": "e1xfMlD3P/pxaHVDWoTWhX4g8TENa7dnUkU4U6eo8+w=",
   "Source": "Workloopz",
   "BasePath": "_content/Workloopz",
   "Mode": "Default",
@@ -6228,25 +6228,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\Jkanban\\jkanban.js"
-    },
-    {
-      "Identity": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.min.css",
-      "SourceId": "Workloopz",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\",
-      "BasePath": "_content/Workloopz",
-      "RelativePath": "lib/Jkanban/jkanban.min.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\Jkanban\\jkanban.min.css"
     },
     {
       "Identity": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.min.js",

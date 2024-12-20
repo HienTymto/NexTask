@@ -1,5 +1,6 @@
 ﻿@{
 	Layout = "TaskLayout/_TaskLayout";
+	
 }
 
 <!DOCTYPE html>
@@ -8,15 +9,12 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Kanban Board</title>
-	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-	<link rel="stylesheet" href="~/lib/Jkanban/jkanban.min.css" />
+	
 	<link href="~/css/kanban.css" rel="stylesheet" />
+	<link rel="stylesheet" href="~/lib/Jkanban/jkanban.css" />
+	
 	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #f8f8f8;
-		}
+		
 
 		#myKanban {
 			overflow-x: auto;
@@ -40,21 +38,41 @@
 		}
 
 		.custom-button {
-			background-color: #4CAF50;
+			
 			border: none;
-			color: white;
-			padding: 7px 15px;
-			margin: 10px;
+			margin:20px;
+			width:85%;
+			padding:10px;
 			text-align: center;
-			text-decoration: none;
-			display: inline-block;
 			font-size: 16px;
+			background-color: #EEEEEE;
 		}
 
 		.form-control:hover {
 			background-color: #F5F5F5; /* Thay đổi màu viền */
 		}
 
+		.comment-form {
+			position: sticky;
+			bottom: 0;
+			background: white;
+			padding: 5px;
+			z-index: 1; /* Đảm bảo phần nhập bình luận luôn ở trên cùng */
+			border-top: 1px solid #ccc;
+			width: 100%;
+		}
+
+		.submit-btn {
+			padding: 8px 16px; /* Giảm padding để nút nhỏ hơn */
+			font-size: 14px; /* Giảm kích thước chữ */
+			background-color: #007bff;
+			color: white;
+			border: none;
+			border-radius: 20px; /* Bo góc tròn */
+			cursor: pointer;
+			transition: background-color 0.3s, transform 0.2s ease; /* Thêm hiệu ứng khi hover */
+			width: auto; /* Đặt chiều rộng tự động để nút không rộng quá */
+		}
 	</style>
 </head>
 <body>
@@ -102,8 +120,8 @@
 
 								<!-- Form để thêm comment mới -->
 								<div class="comment-form">
-									<textarea id="commentText" placeholder="Add a comment..."></textarea>
-									<button id="submitComment" class="submit-btn">Post</button>
+									<textarea id="commentText" placeholder="Thảo luận..."></textarea>
+									<button id="submitComment" class="submit-btn">Gửi</button>
 								</div>
 
 							</div>

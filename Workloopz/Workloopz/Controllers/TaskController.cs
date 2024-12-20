@@ -46,7 +46,16 @@ namespace Workloopz.Controllers
             {
                 return NotFound();
             }
-            db.Tasks.Remove(task);
+            var comments = db.Comments.Where(c => c.TaskId == id).ToList();
+            if (comments != null && comments.Count >0)
+            {
+				db.Comments.RemoveRange(comments);
+				db.SaveChanges();
+			}
+            var links = db.Links.Where(l => l.SourceTaskId == id || l.TargetTaskId == id).ToList();
+            db.Links.RemoveRange(links);
+			db.SaveChanges();
+			db.Tasks.Remove(task);
             db.SaveChanges();
             return RedirectToAction("List", new { id = ProjectId });
         }

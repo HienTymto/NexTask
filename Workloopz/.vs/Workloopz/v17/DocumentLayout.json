@@ -3,32 +3,68 @@
   "WorkspaceRootPath": "D:\\Doan\\Workloopz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\wwwroot\\js\\kanban.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\wwwroot\\js\\kanban.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\shared\\_mainsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\shared\\_mainsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\shared\\tasklayout\\_tasksidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\shared\\tasklayout\\_tasksidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\viewmodels\\commentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\viewmodels\\commentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\taskindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\taskindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\reports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\reports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\task\\board.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\task\\board.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\viewmodels\\gantttaskvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\viewmodels\\gantttaskvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\wwwroot\\js\\kanban.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\wwwroot\\js\\kanban.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\kanbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\kanbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|d:\\doan\\workloopz\\workloopz\\controllers\\summerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3494DA17-D7B7-426D-8A00-B9CA343D0F99}|Workloopz\\Workloopz.csproj|solutionrelative:workloopz\\controllers\\summerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 375,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,94 +82,209 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaskController.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\TaskController.cs",
-              "RelativeDocumentMoniker": "Workloopz\\Controllers\\TaskController.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\TaskController.cs",
-              "RelativeToolTip": "Workloopz\\Controllers\\TaskController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAswAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T10:01:01.687Z",
+              "DocumentIndex": 8,
+              "Title": "Calendar.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Calendar.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\Calendar.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Calendar.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Task\\Calendar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T02:46:12.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "commentVM.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\commentVM.cs",
-              "RelativeDocumentMoniker": "Workloopz\\ViewModels\\commentVM.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\commentVM.cs",
-              "RelativeToolTip": "Workloopz\\ViewModels\\commentVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T09:56:07.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Program.cs",
-              "RelativeDocumentMoniker": "Workloopz\\Program.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Program.cs",
-              "RelativeToolTip": "Workloopz\\Program.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T09:18:12.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "kanban.js",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\kanban.js",
-              "RelativeDocumentMoniker": "Workloopz\\wwwroot\\js\\kanban.js",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\kanban.js",
-              "RelativeToolTip": "Workloopz\\wwwroot\\js\\kanban.js",
-              "ViewState": "AQIAALoAAAAAAAAAAAAAANEAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-15T14:30:11.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommentController.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\CommentController.cs",
-              "RelativeDocumentMoniker": "Workloopz\\Controllers\\CommentController.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\CommentController.cs",
-              "RelativeToolTip": "Workloopz\\Controllers\\CommentController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:53:17.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\ChatHub.cs",
-              "RelativeDocumentMoniker": "Workloopz\\ChatHub.cs",
-              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\ChatHub.cs",
-              "RelativeToolTip": "Workloopz\\ChatHub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T10:18:18.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Board.cshtml",
               "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Board.cshtml",
               "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\Board.cshtml",
               "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Board.cshtml",
               "RelativeToolTip": "Workloopz\\Views\\Task\\Board.cshtml",
-              "ViewState": "AQIAAOYAAAAAAAAAAAAAAOwAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-03T16:09:22.14Z",
+              "WhenOpened": "2024-12-20T02:45:52.177Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\appsettings.json",
+              "RelativeDocumentMoniker": "Workloopz\\appsettings.json",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\appsettings.json",
+              "RelativeToolTip": "Workloopz\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T02:21:52.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\List.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\List.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\List.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Task\\List.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T15:34:42.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_TaskSidebar.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\TaskLayout\\_TaskSidebar.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Shared\\TaskLayout\\_TaskSidebar.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\TaskLayout\\_TaskSidebar.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Shared\\TaskLayout\\_TaskSidebar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T01:49:45.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Reports.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Reports.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\Reports.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\Reports.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Task\\Reports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T02:46:23.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_MainSidebar.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_MainSidebar.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Shared\\_MainSidebar.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_MainSidebar.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Shared\\_MainSidebar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T01:51:06.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T02:58:59.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Workloopz\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Workloopz\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T03:02:33.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "Workloopz\\Controllers\\TaskController.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "Workloopz\\Controllers\\TaskController.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAADgv2MAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T16:32:35.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskIndex.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\TaskIndex.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Task\\TaskIndex.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Task\\TaskIndex.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Task\\TaskIndex.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T02:46:27.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Navbar.cshtml",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeDocumentMoniker": "Workloopz\\Views\\Shared\\_Navbar.cshtml",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeToolTip": "Workloopz\\Views\\Shared\\_Navbar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T02:11:52.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "kanban.js",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\kanban.js",
+              "RelativeDocumentMoniker": "Workloopz\\wwwroot\\js\\kanban.js",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\js\\kanban.js",
+              "RelativeToolTip": "Workloopz\\wwwroot\\js\\kanban.js",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-19T16:47:21.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GanttTaskVM.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\GanttTaskVM.cs",
+              "RelativeDocumentMoniker": "Workloopz\\ViewModels\\GanttTaskVM.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\ViewModels\\GanttTaskVM.cs",
+              "RelativeToolTip": "Workloopz\\ViewModels\\GanttTaskVM.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAIwBkAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T16:28:33.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "KanbanController.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\KanbanController.cs",
+              "RelativeDocumentMoniker": "Workloopz\\Controllers\\KanbanController.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\KanbanController.cs",
+              "RelativeToolTip": "Workloopz\\Controllers\\KanbanController.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAgwFQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:18:21.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SummeryController.cs",
+              "DocumentMoniker": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\SummeryController.cs",
+              "RelativeDocumentMoniker": "Workloopz\\Controllers\\SummeryController.cs",
+              "ToolTip": "D:\\Doan\\Workloopz\\Workloopz\\Controllers\\SummeryController.cs",
+              "RelativeToolTip": "Workloopz\\Controllers\\SummeryController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwCYAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:13:42.246Z"
             }
           ]
         }

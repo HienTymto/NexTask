@@ -36,7 +36,52 @@
                     })
                     .catch(error => console.error("Error:", error));
             },
+           
+
+            //buttonClick: function (el, boardId) {
+            //    el.style.display = "none";
+            //    var formItem = document.createElement("form");
+            //    formItem.setAttribute("class", "itemform");
+            //    formItem.innerHTML =
+            //        '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div>' +
+            //        '<div class="form-group">' +
+            //        '<button type="submit" class="btn btn-primary btn-xs pull-right">Submit</button>' +
+            //        '<button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button>' +
+            //        '</div>';
+            //    KanbanTest.addForm(boardId, formItem);
+            //    formItem.addEventListener("submit", function (e) {
+
+            //        e.preventDefault();
+            //        var text = e.target[0].value;
+            //        fetch('/api/kanban/createTask', {
+            //            method: 'POST',
+            //            headers: { 'Content-Type': 'application/json' },
+            //            body: JSON.stringify({
+            //                status: boardId,
+            //                title: text
+            //            })
+            //        })
+            //            .then(response => response.json())
+            //            .then(res => {
+            //                KanbanTest.addElement(boardId, {
+            //                    id: res.task.id.toString(),
+            //                    title: res.task.tittle
+            //                });
+            //            })
+            //            .catch(error => console.error('Error:', error));
+            //        formItem.parentNode.removeChild(formItem);
+            //    });
+
+            //    document.getElementById("CancelBtn").onclick = function () {
+            //        formItem.parentNode.removeChild(formItem);
+            //        el.style.display = "block";
+            //    };
+            //},
             buttonClick: function (el, boardId) {
+                // Ẩn nút "+ Thêm công việc"
+                el.style.display = "none";
+
+                // Tạo form nhập liệu
                 var formItem = document.createElement("form");
                 formItem.setAttribute("class", "itemform");
                 formItem.innerHTML =
@@ -45,10 +90,31 @@
                     '<button type="submit" class="btn btn-primary btn-xs pull-right">Submit</button>' +
                     '<button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button>' +
                     '</div>';
-                KanbanTest.addForm(boardId, formItem);
+
+                // Tìm hoặc thêm footer
+                var board = el.closest('.kanban-board');
+                var footer = board.querySelector('.kanban-footer');
+                if (!footer) {
+                    footer = document.createElement('div');
+                    footer.classList.add('kanban-footer');
+                    board.appendChild(footer);
+                }
+
+                // Thêm form vào footer
+                footer.appendChild(formItem);
+
+              
+
+                // Xử lý sự kiện Submit
                 formItem.addEventListener("submit", function (e) {
                     e.preventDefault();
                     var text = e.target[0].value;
+
+                    if (text.trim() === "") {
+                        alert("Task title cannot be empty!");
+                        return;
+                    }
+
                     fetch('/api/kanban/createTask', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -63,18 +129,29 @@
                                 id: res.task.id.toString(),
                                 title: res.task.tittle
                             });
+                            resetAddButton(); // Hiển thị lại nút "Thêm công việc"
                         })
-                        .catch(error => console.error('Error:', error));
-                    formItem.parentNode.removeChild(formItem);
+                        .catch(error => console.error('Error:', error))
+                        .finally(() => {
+                            formItem.remove(); // Xóa form sau khi hoàn thành
+                        });
                 });
 
+                // Xử lý sự kiện Cancel
                 document.getElementById("CancelBtn").onclick = function () {
-                    formItem.parentNode.removeChild(formItem);
+                    formItem.remove(); // Xóa form
+                    resetAddButton(); // Hiển thị lại nút "Thêm công việc"
                 };
+
+                // Hàm khôi phục nút "+ Thêm công việc"
+                function resetAddButton() {
+                    el.style.display = "block";
+                }
             },
+
             itemAddOptions: {
                 enabled: true,
-                content: '+ Add New Card',
+                content: '+ Thêm công việc',
                 class: 'custom-button',
                 footer: true,
             },
@@ -86,9 +163,10 @@
                     title: task.title,
                     click: function (el) {
                         const taskId = task.id;
-                        console.log('Task clicked: ' + taskId);
+                       
                     },
-                }))
+                })),
+                footer: true
             }))
         });
     })
@@ -128,8 +206,10 @@ const connection = new signalR.HubConnectionBuilder()
 
 // Nhận bình luận mới từ server
 connection.on("ReceiveMessage", (user, message, taskId) => {
+    
     const currentTaskId = document.getElementById("taskModal").getAttribute("data-task-id");
-    if (currentTaskId === taskId) {
+   
+    if (currentTaskId == taskId) {
         const commentHtml = `
             <div class="comment">
                 <div class="comment-header">
@@ -152,31 +232,75 @@ connection.start()
 
 // Gửi bình luận mới
 function sendComment(taskId) {
-    const user = "YourUserName"; // TODO: Lấy từ session hoặc backend
-    const message = document.getElementById("commentText").value;
+    fetch('/api/Comment/getname')
+        .then(response => response.json())
+        .then(data => {
+            const user = data.fullname; 
+            const message = document.getElementById("commentText").value;
 
-    if (message.trim() !== "") {
-        connection.invoke("SendMessage", user, message, taskId)
-            .then(() => {
-                document.getElementById("commentText").value = ""; // Xóa nội dung sau khi gửi
-            })
-            .catch(err => console.error("Error sending message: ", err));
-    } else {
-        alert("Comment cannot be empty.");
-    }
+           
+            if (message.trim() !== "") {
+                // Gửi bình luận lên server
+                fetch('/api/comment/postcomment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        TaskId: taskId,
+                        Contents: message
+                    })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to post comment');
+                        }
+                        // Sau khi gửi thành công, reset nội dung
+                        document.getElementById("commentText").value = "";
+                       
+                    })
+                    .catch(err => console.error("Error posting comment:", err));
+            } else {
+                console.log("Comment cannot be empty.");
+            }
+        })
+        .catch(error => console.error("Error fetching user:", error));
+   
 }
 
 // Thêm sự kiện cho nút Post
-document.getElementById("submitComment").addEventListener("click", () => {
-    const taskId = document.getElementById("taskModal").getAttribute("data-task-id");
-    sendComment(taskId);
+document.addEventListener('DOMContentLoaded', () => {
+    const submitCommentButton = document.getElementById("submitComment");
+    if (submitCommentButton) {
+        submitCommentButton.addEventListener("click", () => {
+            const taskId = document.getElementById("taskModal").getAttribute("data-task-id");
+        
+            sendComment(taskId);
+        });
+    } else {
+        console.error("submitComment button not found in DOM.");
+    }
 });
+
+// Sự kiện cho enter comment
+document.addEventListener('DOMContentLoaded', () => {
+    const enterCommnet = document.getElementById("commentText");
+    if (enterCommnet) {
+        enterCommnet.addEventListener(("keypress"), (event) => {
+            const taskId = document.getElementById("taskModal").getAttribute("data-task-id");
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault(); // ngan xuong dong
+                sendComment(taskId);
+            }
+        })
+    }
+})
 
 // Reset modal khi mở
 function resetModal(taskId) {
     document.getElementById("commentsList").innerHTML = "";
     document.getElementById("commentText").value = "";
-    console.log("task id: " + taskId);
+    
     // Lấy các comment cũ từ API
     fetch(`/api/Comment/GetComments?taskId=${taskId}`)
         .then(response => response.json())
@@ -204,11 +328,9 @@ function resetModal(taskId) {
 function openTaskModal(el) {
     const taskId = el.dataset.eid;
     document.getElementById("taskModal").setAttribute("data-task-id", taskId);
-    document.getElementById("taskTitle").innerText = el.innerText;
-   
-    resetModal(taskId);
-    
+    document.getElementById("taskTitle").innerText = el.innerText; 
 
+    resetModal(taskId);
     const taskModal = new bootstrap.Modal(document.getElementById("taskModal"));
     taskModal.show();
 }

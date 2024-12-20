@@ -117,10 +117,6 @@
       "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.js"
     },
     {
-      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.min.css",
-      "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.min.css"
-    },
-    {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.min.js",
       "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.min.js"
     },

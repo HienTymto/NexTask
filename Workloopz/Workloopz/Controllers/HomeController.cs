@@ -48,7 +48,7 @@ namespace Workloopz.Controllers
                         var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                         var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 						await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
-                        
+                        HttpContext.Session.SetString("fullname", user.FirstName + " " + user.LastName);
                         HttpContext.Session.SetInt32("userId", user.Id);
                         //Neu dung mat khau chuyen ve dashboard
                         return View("Index");
