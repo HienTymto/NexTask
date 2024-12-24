@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Workloopz.Data;
+using Workloopz.ViewModels;
 
 namespace Workloopz.Controllers
 {
@@ -10,102 +13,94 @@ namespace Workloopz.Controllers
     {
         private readonly NexTasksContext db;
         public PermissionApiController(NexTasksContext context)
-        { 
+        {
             db = context;
         }
-        //[HttpGet("data")]
-        //public IActionResult GetRolesWithPermissions()
-        //{
-        //    // Lấy toàn bộ dữ liệu thô trước
-        //    var rawData = db.RolePermissions
-        //        .Join(db.Roles, rp => rp.RoleId, r => r.Id, (rp, r) => new { rp.RoleId, RoleName = r.Name, rp.PermissionId })
-        //        .Join(db.Permissions, rpr => rpr.PermissionId, p => p.Id, (rpr, p) => new { rpr.RoleName, p.Type, PermissionId = p.Id, PermissionName = p.Name })
-        //        .ToList();
 
-        //    // Xử lý GroupBy trong bộ nhớ
-        //    var rolesWithPermissions = rawData
-        //        .GroupBy(x => x.RoleName)
-        //        .Select(group => new
-        //        {
-        //            RoleName = group.Key,
-        //            Permissions = group
-        //                .GroupBy(x => x.Type)
-        //                .Select(typeGroup => new
-        //                {
-        //                    TypePermission = typeGroup.Key,
-        //                    Permissions = typeGroup.Select(p => new
-        //                    {
-        //                        p.PermissionId,
-        //                        p.PermissionName
-        //                    }).ToList()
-        //                }).ToList()
-        //        }).ToList();
+		[HttpGet("data")]
+		public IActionResult GetRolesWithPermissions()
+		{
+			var allPermissions = db.Permissions.ToList();
+			var allRoles = db.Roles.ToList(); // Lấy tất cả các vai trò
+			var allTypes = db.Permissions.Select(p => p.Type).Distinct().ToList();
 
-        //    return Ok(rolesWithPermissions);
-        //}
-        [HttpGet("data")]
-        public IActionResult GetRolesWithPermissions()
-        {
-            // Lấy tất cả các quyền từ database (hoặc danh sách cố định nếu có)
-            var allPermissions = db.Permissions.ToList();
+			// Lấy dữ liệu Role với các Permission liên quan
+			var rolesWithPermissions = allRoles.Select(role => new
+			{
+				RoleName = role.Name,
+				Permissions = allTypes.Select(type => new
+				{
+					TypePermission = type,
+					Permissions = allPermissions
+						.Where(p => p.Type == type)
+						.Select(p => new
+						{
+							PermissionId = p.Id,
+							PermissionName = p.Name,
+							Select = db.RolePermissions.Any(rp => rp.RoleId == role.Id && rp.PermissionId == p.Id)
+						}).ToList()
+				}).ToList(),
+				AssignedPermissions = db.RolePermissions
+					.Where(rp => rp.RoleId == role.Id)
+					.Select(rp => rp.PermissionId)
+					.ToList()
+			}).ToList();
 
-            var rolesWithPermissions = db.RolePermissions
-                .Join(db.Roles, rp => rp.RoleId, r => r.Id, (rp, r) => new { rp, r.Name })
-                .Join(db.Permissions, rpr => rpr.rp.PermissionId, p => p.Id, (rpr, p) => new { rpr.Name, p })
-                .ToList() // Chuyển về List để có thể nhóm (group) trên bộ nhớ
-                .GroupBy(x => x.Name) // Group by Role Name
-                .Select(group => new
-                {
-                    RoleName = group.Key,
-                    Permissions = group
-                        .GroupBy(x => x.p.Type) // Group by TypePermission
-                        .Select(typeGroup => new
-                        {
-                            TypePermission = typeGroup.Key,
-                            Permissions = allPermissions
-                                .Where(p => p.Type == typeGroup.Key) // Lọc các quyền theo typePermission
-                                .Select(p => new
-                                {
-                                    PermissionId = p.Id,
-                                    PermissionName = p.Name,
-                                    Select = typeGroup.Any(x => x.p.Id == p.Id) // Nếu quyền đã được cấp, set Select = true
-                                }).ToList()
-                        }).ToList(),
-                    AssignedPermissions = db.RolePermissions
-                        .Where(rp => rp.Role.Name == group.Key)
-                        .Select(rp => rp.PermissionId).ToList() // Get assigned permissionIds for the role
-                }).ToList();
+			return Ok(rolesWithPermissions);
+		}
 
-            // Lọc thêm các TypePermission chưa được cấp quyền cho các roles (thêm vào nếu không có)
-            var allTypes = db.Permissions.Select(p => p.Type).Distinct().ToList();
-            foreach (var role in rolesWithPermissions)
-            {
-                foreach (var type in allTypes)
-                {
-                    if (!role.Permissions.Any(p => p.TypePermission == type))
-                    {
-                        role.Permissions.Add(new
-                        {
-                            TypePermission = type,
-                            Permissions = allPermissions
-                                .Where(p => p.Type == type)
-                                .Select(p => new
-                                {
-                                    PermissionId = p.Id,
-                                    PermissionName = p.Name,
-                                    Select = false // Nếu chưa được cấp quyền, select = false
-                                }).ToList()
-                        });
-                    }
-                }
-            }
+		[HttpPut("update")]
+		public IActionResult UpdatePermission([FromBody] PermissionVM permission)
+		{
+			if (permission == null || string.IsNullOrEmpty(permission.RoleName) || permission.PermissionIds == null || !permission.PermissionIds.Any())
+			{
+				return BadRequest(new { message = "Thông tin không hợp lệ. Vui lòng kiểm tra lại dữ liệu." });
+			}
 
-            return Ok(rolesWithPermissions);
-        }
+			try
+			{
+				
+				var role = db.Roles.FirstOrDefault(r => r.Name == permission.RoleName);
+				if (role == null)
+				{
+					return NotFound(new { message = $"Vai trò '{permission.RoleName}' không tồn tại." });
+				}
+
+				
+				var existingPermissions = db.RolePermissions.Where(rp => rp.RoleId == role.Id).ToList();
+
+				
+				var permissionsToRemove = existingPermissions
+					.Where(rp => !permission.PermissionIds.Contains(rp.PermissionId))
+					.ToList();
+				db.RolePermissions.RemoveRange(permissionsToRemove);
+
+				
+				var existingPermissionIds = existingPermissions.Select(rp => rp.PermissionId).ToList();
+				var permissionsToAdd = permission.PermissionIds
+					.Where(id => !existingPermissionIds.Contains(id))
+					.Select(id => new RolePermission
+					{
+						RoleId = role.Id,
+						PermissionId = id
+					}).ToList();
+				db.RolePermissions.AddRange(permissionsToAdd);
+
+				
+				db.SaveChanges();
+
+				
+				return Ok(new { message = "Cập nhật quyền thành công!" });
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, new { message = "Đã xảy ra lỗi trên server.", detail = ex.Message });
+			}
+		}
 
 
 
 
 
-    }
+	}
 }

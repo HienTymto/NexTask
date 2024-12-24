@@ -135,14 +135,12 @@ public partial class NexTasksContext : DbContext
 
         modelBuilder.Entity<RolePermission>(entity =>
         {
-            entity.HasNoKey();
-
-            entity.HasOne(d => d.Permission).WithMany()
+            entity.HasOne(d => d.Permission).WithMany(p => p.RolePermissions)
                 .HasForeignKey(d => d.PermissionId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_RolePermissions_Permissions");
 
-            entity.HasOne(d => d.Role).WithMany()
+            entity.HasOne(d => d.Role).WithMany(p => p.RolePermissions)
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_RolePermissions_Roles");
