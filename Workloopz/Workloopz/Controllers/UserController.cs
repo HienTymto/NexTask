@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Workloopz.Attribute;
 using Workloopz.Data;
 using Workloopz.Helpers;
 using Workloopz.ViewModels;
@@ -17,6 +18,7 @@ namespace Workloopz.Controllers
             db = context;
             _mapper = mapper;
         }
+        [AuthorizePermission("View_user")]
 		public IActionResult Index()
 		{
 			var Users = db.Users.ToList();
@@ -29,7 +31,7 @@ namespace Workloopz.Controllers
             return View();
         }
 
-		
+		[AuthorizePermission("Create_user")]
 		[HttpPost]
         public IActionResult Register(RegisterVM model)
         {

@@ -33,11 +33,15 @@ public partial class User
 
     public DateTime? Birthday { get; set; }
 
+    public int RoleId { get; set; }
+
     public virtual BusinessUnit? BuNavigation { get; set; }
 
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
 
     public virtual ICollection<Project> Projects { get; set; } = new List<Project>();
+
+    public virtual Role Role { get; set; } = null!;
 
     public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
 }

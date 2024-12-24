@@ -109,6 +109,22 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\DataTables\\datatables.css",
+      "PackagePath": "staticwebassets\\lib\\DataTables\\datatables.css"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\DataTables\\datatables.js",
+      "PackagePath": "staticwebassets\\lib\\DataTables\\datatables.js"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\DataTables\\datatables.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTables\\datatables.min.css"
+    },
+    {
+      "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\DataTables\\datatables.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTables\\datatables.min.js"
+    },
+    {
       "Id": "D:\\Doan\\Workloopz\\Workloopz\\wwwroot\\lib\\Jkanban\\jkanban.css",
       "PackagePath": "staticwebassets\\lib\\Jkanban\\jkanban.css"
     },

@@ -1,0 +1,178 @@
+﻿@{
+    Layout = "_Layout";
+    var Permission = ViewBag.permission;
+}
+<head>
+    <style>
+        #title {
+            border-bottom: solid 0.5px #A9A9A9;
+        }
+    </style>
+</head>
+
+<div id="title">
+    <h4 id="content">Quản lý phân quyền</h4>
+</div>
+
+<table id="rolesTable" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Role Name</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dữ liệu sẽ được tải động -->
+    </tbody>
+</table>
+
+<!-- Modal for editing permissions -->
+<div id="editModal" class="modal fade" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chỉnh sửa quyền cho <span id="roleName"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="permissionForm">
+                    <div class="form-group">
+                        <label for="typePermissionSelect">Type Permission</label>
+                        <select id="typePermissionSelect" class="form-control" onchange="loadPermissionsByType(this.value)">
+                            <!-- Các option sẽ được tải động -->
+                        </select>
+                    </div>
+                    <div id="permissionTable">
+                        <!-- Các quyền sẽ được render ở đây -->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="savePermissions()">Lưu thay đổi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    let rolesTable;
+    let currentRolePermissions = {}; // Dữ liệu phân quyền của role hiện tại
+    let allPermissions = []; // Lưu tất cả các quyền từ API
+
+    // Khởi tạo DataTable
+    $(document).ready(function () {
+        rolesTable = $('#rolesTable').DataTable({
+            ajax: {
+                url: '/api/permisson/data', // Đường dẫn API lấy dữ liệu
+                dataSrc: ''
+            },
+            columns: [
+                { data: 'roleName' },
+                {
+                    data: 'roleName',
+                    render: function (data) {
+                        return `<button class="btn btn-primary" onclick="editRole('${data}')">Chỉnh sửa</button>`;
+                    },
+                    orderable: false
+                }
+            ]
+        });
+
+        // Lấy tất cả các quyền từ API (sử dụng ở bước sau)
+        fetch('/api/permisson/data')
+            .then(response => response.json())
+            .then(data => {
+                allPermissions = data.reduce((acc, role) => {
+                    role.permissions.forEach(type => {
+                        acc.push(...type.permissions);
+                    });
+                    return acc;
+                }, []);
+            });
+    });
+
+    // Hàm chỉnh sửa phân quyền cho role
+    function editRole(roleName) {
+        fetch(`/api/permisson/data`) // Lấy dữ liệu phân quyền từ API
+            .then(response => response.json())
+            .then(data => {
+                const role = data.find(r => r.roleName === roleName);
+                if (!role) return;
+
+                // Cập nhật tên role vào modal
+                document.getElementById('roleName').innerText = roleName;
+                currentRolePermissions = role;
+
+                const typePermissionSelect = document.getElementById('typePermissionSelect');
+                typePermissionSelect.innerHTML = '<option value="">-- Chọn loại quyền --</option>';
+
+                // Tạo các option cho select theo TypePermission
+                role.permissions.forEach(type => {
+                    typePermissionSelect.innerHTML += `<option value="${type.typePermission}">${type.typePermission}</option>`;
+                });
+
+                // Hiển thị quyền theo loại quyền đầu tiên nếu không có loại quyền nào được chọn
+                if (role.permissions.length > 0) {
+                    loadPermissionsByType(role.permissions[0].typePermission);
+                }
+
+                // Hiển thị modal
+                const modal = new bootstrap.Modal(document.getElementById('editModal'), {
+                    keyboard: false // Tùy chọn: ngừng đóng modal khi nhấn phím Escape
+                });
+                modal.show();
+            })
+            .catch(err => {
+                console.error('Lỗi khi lấy dữ liệu:', err); // Log lỗi nếu có
+            });
+    }
+
+    // Hàm tải quyền theo loại đã chọn
+    function loadPermissionsByType(typePermission) {
+        if (!typePermission) return;
+
+        // Lọc các quyền theo typePermission đã chọn
+        const selectedType = currentRolePermissions.permissions.find(type => type.typePermission === typePermission);
+        if (!selectedType) return;
+
+        let html = '<table class="table"><thead><tr><th>Permission</th><th>Allow</th></tr></thead><tbody>';
+
+        // Lặp qua tất cả quyền của typePermission, hiển thị checkbox đã cấp quyền (checked) hoặc chưa cấp (unchecked)
+        selectedType.permissions.forEach(p => {
+            const checked = currentRolePermissions.assignedPermissions.includes(p.permissionId) ? 'checked' : '';
+            html += `<tr>
+                    <td>${p.permissionName}</td>
+                    <td><input type="checkbox" value="${p.permissionId}" ${checked} /></td>
+                </tr>`;
+        });
+
+        html += '</tbody></table>';
+        document.getElementById('permissionTable').innerHTML = html;
+    }
+
+    // Hàm lưu các quyền đã chỉnh sửa
+    function savePermissions() {
+        const roleName = document.getElementById('roleName').innerText;
+        const checkboxes = document.querySelectorAll('#permissionTable input[type="checkbox"]');
+        const permissionIds = Array.from(checkboxes)
+            .filter(cb => cb.checked)
+            .map(cb => parseInt(cb.value));
+
+        fetch('/Role/SavePermissions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ RoleName: roleName, PermissionIds: permissionIds })
+        }).then(response => {
+            if (response.ok) {
+                alert('Cập nhật quyền thành công!');
+                $('#editModal').modal('hide');
+                rolesTable.ajax.reload(); // Tải lại DataTable
+            } else {
+                alert('Cập nhật quyền thất bại.');
+            }
+        });
+    }
+</script>

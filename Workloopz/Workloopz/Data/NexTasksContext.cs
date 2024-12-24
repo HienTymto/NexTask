@@ -21,9 +21,15 @@ public partial class NexTasksContext : DbContext
 
     public virtual DbSet<Link> Links { get; set; }
 
+    public virtual DbSet<Permission> Permissions { get; set; }
+
     public virtual DbSet<Priorite> Priorites { get; set; }
 
     public virtual DbSet<Project> Projects { get; set; }
+
+    public virtual DbSet<Role> Roles { get; set; }
+
+    public virtual DbSet<RolePermission> RolePermissions { get; set; }
 
     public virtual DbSet<Status> Statuses { get; set; }
 
@@ -94,6 +100,13 @@ public partial class NexTasksContext : DbContext
                 .HasConstraintName("FK_Link_Tasks1");
         });
 
+        modelBuilder.Entity<Permission>(entity =>
+        {
+            entity.Property(e => e.Code).HasMaxLength(50);
+            entity.Property(e => e.Name).HasMaxLength(50);
+            entity.Property(e => e.Type).HasMaxLength(50);
+        });
+
         modelBuilder.Entity<Priorite>(entity =>
         {
             entity.Property(e => e.Id).HasColumnName("ID");
@@ -111,6 +124,28 @@ public partial class NexTasksContext : DbContext
                 .HasForeignKey(d => d.Owner)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Projects_Users");
+        });
+
+        modelBuilder.Entity<Role>(entity =>
+        {
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.Description).HasMaxLength(255);
+            entity.Property(e => e.Name).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<RolePermission>(entity =>
+        {
+            entity.HasNoKey();
+
+            entity.HasOne(d => d.Permission).WithMany()
+                .HasForeignKey(d => d.PermissionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_RolePermissions_Permissions");
+
+            entity.HasOne(d => d.Role).WithMany()
+                .HasForeignKey(d => d.RoleId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_RolePermissions_Roles");
         });
 
         modelBuilder.Entity<Status>(entity =>
@@ -191,6 +226,11 @@ public partial class NexTasksContext : DbContext
             entity.HasOne(d => d.BuNavigation).WithMany(p => p.Users)
                 .HasForeignKey(d => d.Bu)
                 .HasConstraintName("FK_Users_BusinessUnits");
+
+            entity.HasOne(d => d.Role).WithMany(p => p.Users)
+                .HasForeignKey(d => d.RoleId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Users_Roles");
         });
 
         modelBuilder.Entity<UserProject>(entity =>

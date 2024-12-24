@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
 using Workloopz.Data;
+using Workloopz.Helpers;
 using Workloopz.Models;
 using Workloopz.ViewModels;
 
@@ -22,7 +23,9 @@ namespace Workloopz.Controllers
 		[Authorize]
 		public IActionResult Index()
         {
-            return View();
+            TempData["Message"] = "hehehehhe";
+			return View();
+            
         }
         [HttpGet]
         public IActionResult Login()
@@ -50,7 +53,8 @@ namespace Workloopz.Controllers
 						await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
                         HttpContext.Session.SetString("fullname", user.FirstName + " " + user.LastName);
                         HttpContext.Session.SetInt32("userId", user.Id);
-                        //Neu dung mat khau chuyen ve dashboard
+                        
+                        HttpContext.Session.SetInt32("roleId", user.RoleId);
                         return View("Index");
                     }
                     else {

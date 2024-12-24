@@ -1,5 +1,124 @@
 ﻿@{
-    Layout = "_Layout";
+	Layout = "_Layout";
 }
 
-<div>Hello</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+	<style>
+		#title {
+			border-bottom: solid 0.5px #A9A9A9;
+		}
+
+		#content {
+			padding-bottom: 15px;
+		}
+
+		#projecttitle {
+			padding: 13px;
+		}
+
+		#project-card {
+			background: linear-gradient(90deg, #C6EDFB 10%, #f5f5f5 10%);
+			background-size: cover;
+			width: 70%;
+			height: 80%
+		}
+
+		.statustext {
+			margin-left:10px;
+			font-size: 13px;
+			padding-left: 8.5%;
+			border-radius:10px;
+		}
+		.no-margin{
+			margin:0;
+			padding-bottom:0px;
+		}
+
+		.statustext:hover {
+			background-color:lightgray;
+			
+		}
+		.projectname {
+			padding-left:13%;
+			margin: 0;
+		}
+
+		#quick-link {
+			padding-left: 13%;
+		}
+		#board{
+			border-top: solid 0.5px #A9A9A9;
+			margin-left: 10px;
+			font-size: 13px;
+			width:100%;
+			padding-bottom: 10px;
+			padding-left: 9%;
+			
+		}
+
+		.numcount{
+			background-color:lightgray;
+			width:30px;
+			height:18px;
+			border-radius:9px;
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+</head>
+<script style="text/javascript">
+toastr.succsess('@TempData["Message"]')</script>
+<body>
+	<div id="title">
+		<h4 id="content">Công việc của bạn</h4>
+	</div>
+	<div id="project">
+		<div class="row" id="projecttitle">
+			<div class="col-6">
+				<h6>Dự án gần đây</h6>
+			</div>
+			<div class="col-6 d-flex justify-content-end">
+				<a href="#" class="link-underline link-underline-opacity-0">Tất cả dự án</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card" id="project-card">
+					<div class="card-header">
+						<p class="projectname">template</p>
+					</div>
+					<div class="card-body">
+						<div >
+							<h5 class="card-title" id="quick-link">TRUY CẬP NHANH</h5>
+						</div>
+						<div class="row statustext">
+							<p class="no-margin col-6">Việc cần làm</p>
+							<div class="no-margin col-6" style="display:flex; justify-content:end;">
+								<p class="numcount">0</p></div>
+						</div><div class="row statustext">
+							<p class="no-margin col-6">Hoàn thành</p>
+							<div class="no-margin col-6" style="display:flex; justify-content:end;">
+								<p class="numcount">0</p>
+							
+							</div>
+
+						</div>
+						<div id="board">
+							<span>board</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+</head>
+
+@if (ViewContext.HttpContext.Items["ToastMessage"] != null)
+{
+    <script>
+        toastr.error('@ViewContext.HttpContext.Items["ToastMessage"]');
+    </script>
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
